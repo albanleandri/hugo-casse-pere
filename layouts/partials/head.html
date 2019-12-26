@@ -1,5 +1,25 @@
-
 <head>
+
+    {{ if not .Site.IsServer }}
+        {{ with $.Site.Params.googleTagManager }}
+            <!-- Google Tag Manager -->
+            <!-- create dataLayer -->
+            <script>
+                var dataLayer = window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                page:'{{ .Title }}',
+                categories:'only examples about your dataLayer'
+                });
+            </script>
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','{{ . }}');</script>
+            <!-- End Google Tag Manager -->
+        {{ end }}
+    {{ end }}
+
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -25,9 +45,9 @@
 
     {{ .Hugo.Generator }}
 
-    {{ "<!-- IndieWeb -->" | safeHTML }}
+    {{ "<!-- Organization -->" | safeHTML }}
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-    {{ with .Site.Params.indieWeb.webmention }}
+    {{ with .Site.Params.Organization.webmention }}
         <link rel="webmention" href="https://webmention.io/{{ . }}/webmention" />
         <link rel="pingback" href="https://webmention.io/{{ . }}/xmlrpc" />
     {{ end }}

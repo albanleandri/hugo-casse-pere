@@ -4,15 +4,17 @@
         {{ $style := (print "header-content-" (.Scratch.Get "header-style")) }}
 
         <div class="site-header-content">
+
             {{ partial $style . }}
+
         </div>
 
         <nav class="site-nav">
             <div class="site-nav-left">
+
                 {{ partial "site-menu" . }}
+                
             </div>
-
-
 
             {{ partial "site-nav-right" . }}
 
@@ -20,3 +22,12 @@
 
     </div>
 </header>
+
+{{ if not .Site.IsServer }}
+    {{ with $.Site.Params.googleTagManager }}
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ . }}"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    {{ end }}
+{{ end }}

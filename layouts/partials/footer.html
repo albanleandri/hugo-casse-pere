@@ -1,9 +1,9 @@
 <footer class="site-footer outer">
     <div class="site-footer-content inner">
-        {{ if .Site.Params.IndieWeb }}
+        {{ if .Site.Params.Organization }}
         <div class="h-card vcard">
             <p>
-                <a style="text-decoration: none" href="{{ .Site.BaseURL }}" class="p-name u-url url author metatag"
+                <a style="text-decoration: none" href="{{ .Site.BaseURL }}/about" class="p-name u-url url author metatag"
                    rel="me">
                     {{ .Site.Author.name }}
                 </a> /
@@ -15,14 +15,14 @@
                 <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" alt="Avatar"/>
             </p>
             <p>
-                <span class="p-locality">{{ .Site.Params.IndieWeb.City }}</span>,
-                <span class="p-country-name">{{ .Site.Params.IndieWeb.Country }}</span><br/>
+                <span class="p-locality">{{ .Site.Params.Organization.City }}</span>,
+                <span class="p-country-name">{{ .Site.Params.Organization.Country }}</span><br/>
             </p>
         </div>
         {{ end }}
 
         <section class="copyright" style="line-height: 1.3em;">
-            <a href="/">{{.Site.Params.orgName}}</a> {{.Site.Params.copyright}} <br>
+            {{.Site.Params.orgName}} {{.Site.Params.copyright}} <br>
         </section>
         <nav class="site-footer-nav">
             <a href="/archive">Archives</a>

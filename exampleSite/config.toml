@@ -24,9 +24,11 @@ assetDir        = "static"
   description = "Portfolio and Blog for Chaschper"
   metaDescription = ""
   googleAnalytics = ""
+  googleTagManager = "GTM-XXXXXXX"
   customCSS = []
-  RSSLink = ""
+  RSSLink = "" # "/post/index.xml" for RSS feed of "post" content type
   showSubcribe = true
+  showSearch = false
   show_reading_time = true
 
   mainSections = ["musings", "music", "code", "art"]
