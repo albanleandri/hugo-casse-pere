@@ -13,6 +13,7 @@ assetDir        = "static"
     email   = "jens-christian@invisible.ch"
     avatar  = "/img/avatar.jpg"
     description = "Maker. Musician"
+    website = "https://my-website.com"
 
 [params]
   title       = "Invisible"
@@ -44,6 +45,7 @@ assetDir        = "static"
   pageNotFoundTitle = "404 - Page not found"
 
   googleSiteVerification = "xyzGoogleVerificationCode"
+  yandexSiteVerification = "abcYandexSiteVerification"
 
 
 [permalinks]
@@ -82,10 +84,11 @@ assetDir        = "static"
 
 # These are parameters used for indieweb identity. You should set these along
 # with the above email/social network parameters.
-[params.IndieWeb]
-    Country = "Switzerland"
-    City = "Zurich"
+[params.Indieweb]
+    country = "Switzerland"
+    city = "Zurich"
     webmention = "invisible.ch"
+
 
 # Enable this section for Matomo analytics. You will need to install
 # the "matomo" theme and enable it in the themes setting above
