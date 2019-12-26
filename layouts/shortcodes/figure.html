@@ -1,6 +1,6 @@
 {{ $altText := .Get "alt"}}
 {{ $caption := .Get "caption"}}
-{{ with $.Page.Resources.GetMatch (.Get "src") }}
+{{ with .Page.Resources.GetMatch (.Get "src") }}
 <figure>
     <a href="{{.RelPermalink}}">
         <img
