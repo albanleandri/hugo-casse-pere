@@ -1,9 +1,9 @@
 <footer class="site-footer outer">
     <div class="site-footer-content inner">
-        {{ if .Site.Params.Organization }}
+        {{ if .Site.Params.Indieweb }}
         <div class="h-card vcard">
             <p>
-                <a style="text-decoration: none" href="{{ .Site.BaseURL }}/about" class="p-name u-url url author metatag"
+                <a style="text-decoration: none" href="{{ .Site.Author.website }}" class="p-name u-url url author metatag"
                    rel="me">
                     {{ .Site.Author.name }}
                 </a> /
@@ -15,8 +15,8 @@
                 <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" alt="Avatar"/>
             </p>
             <p>
-                <span class="p-locality">{{ .Site.Params.Organization.City }}</span>,
-                <span class="p-country-name">{{ .Site.Params.Organization.Country }}</span><br/>
+                <span class="p-locality">{{ .Site.Params.Indieweb.city }}</span>,
+                <span class="p-country-name">{{ .Site.Params.Indieweb.country }}</span><br/>
             </p>
         </div>
         {{ end }}
