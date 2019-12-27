@@ -23,8 +23,7 @@
             */}}
             {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
             <div class="reading-time">
-                <span>{{ .WordCount}} words</span>
-                <span>&mdash; {{ .ReadingTime}} minutes read</span>
+                <span>{{ .ReadingTime}} minutes read</span>
             </div>
 
             {{ end }}
