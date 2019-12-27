@@ -2,21 +2,7 @@
 
     {{ if not .Site.IsServer }}
         {{ if $.Site.Params.googleTagManager }}
-            {{ "<!-- Google Tag Manager -->" | safeHTML }}
-            {{ "<!-- create dataLayer -->" | safeHTML }}
-            <script>
-                var dataLayer = window.dataLayer = window.dataLayer || [];
-                dataLayer.push({
-                page:'{{ .Page.Title }}',
-                categories:'only examples about your dataLayer'
-                });
-            </script>
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','{{ $.Site.Params.googleTagManager }}');</script>
-            {{ "<!-- End Google Tag Manager -->" | safeHTML }}
+            {{ partial "gtm-main-tag" . }}
         {{ end }}
     {{ end }}
 
