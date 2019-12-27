@@ -1,4 +1,4 @@
-<header class="site-header outer " {{if .Site.Params.cover}}style="background-image: url({{.Site.Params.cover | absURL}})" {{end}}>
+<header class="site-header outer" {{if .Site.Params.cover}} style="background-image: url({{.Site.Params.cover | absURL}})" {{end}}>
     <div class="inner">
 
         {{ $style := (print "header-content-" (.Scratch.Get "header-style")) }}
@@ -22,12 +22,3 @@
 
     </div>
 </header>
-
-{{ if not .Site.IsServer }}
-    {{ with .Site.Params.googleTagManager }}
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ . }}"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-    {{ end }}
-{{ end }}
