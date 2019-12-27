@@ -1,11 +1,17 @@
-<header class="site-header outer " {{if .Site.Params.cover}} style="background-image: url({{.Site.Params.cover | absURL}})" {{end}}>
+<header class="site-header outer" {{if .Site.Params.cover}} style="background-image: url({{.Site.Params.cover | absURL}})" {{end}}>
     <div class="inner">
+
         <nav class="site-nav">
-            <div class="site-nav-left">{{ if .Site.Params.logo }}
-                <a class="site-nav-logo" href="#"><img src="{{ .Site.Params.logo  | absURL}}"
-                                                       alt="{{ .Site.Params.Title }}"/></a>{{end}}
+            <div class="site-nav-left">
+
+                {{ if .Site.Params.logo }}
+                    <a class="site-nav-logo" href="#">
+                        <img src="{{ .Site.Params.logo  | absURL}}" alt="{{ .Site.Params.Title }}"/>
+                    </a>
+                {{ end }}
 
                 {{ partial "site-menu" . }}
+
             </div>
 
             {{ partial "site-nav-right" . }}
