@@ -1781,7 +1781,9 @@ body {
     transform: rotate(90deg)
 }
 
-.floating-header-share-fb, .floating-header-share-tw {
+.floating-header-share-fb, 
+.floating-header-share-tw,
+.floating-header-share-wa {
     display: block;
     -ms-flex-align: center;
     -ms-grid-row-align: center;
