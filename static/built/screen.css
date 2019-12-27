@@ -1804,6 +1804,10 @@ body {
     background: #005e99
 }
 
+.floating-header-share-wa {
+	background: #25d366
+}
+
 .progress {
     position: absolute;
     right: 0;
@@ -1857,7 +1861,9 @@ body {
         font-size: 1.5rem
     }
 
-    .floating-header-share-fb, .floating-header-share-tw {
+    .floating-header-share-fb, 
+    .floating-header-share-tw,
+    .floating-header-share-wa {
         width: 40px;
         height: 40px;
         line-height: 38px
@@ -1949,7 +1955,6 @@ body {
     .site-header-content h2 {
         font-size: 1.5rem;
     }
-
 
     .site-header-content .author-bio {
         font-size: 1.8rem;
