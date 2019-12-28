@@ -3,9 +3,7 @@
     <header class="post-full-header">
         <section class="post-full-meta">
             <div>
-                <a class="u-url" href="{{ .Permalink }}">
-                    <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
-                </a>
+                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
                 {{if .Params.tags }}
                 <span class="date-divider">/</span>
                 {{ range $index, $tag := .Params.tags }}
