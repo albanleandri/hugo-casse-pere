@@ -1,48 +1,44 @@
-# Chaschper
+# Kashpair
 
-[![Build Status](https://travis-ci.org/jcfischer/hugo-chaschper.svg?branch=master)](https://travis-ci.org/jcfischer/hugo-chaschper)
+[![Build Status](https://travis-ci.org/albanleandri/hugo-kashpair.svg?branch=master)](https://travis-ci.org/albanleandri/hugo-kashpair)
 
-## History 
+## History
+[Kashpair](https://github.com/albanleandri/hugo-kashpair) is based on [Chaschper](https://github.com/jcfischer/hugo-chaschper)
+[Chaschper](https://github.com/jcfischer/hugo-chaschper) is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
 
-[Chaschper](https://github.com/jcfischer/hugo-chascher) is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
+With Kashpair, I tried to organize things in a way that suited me better.
 
-I simplified aspects of the Casper theme (removed the two different single page styles, cleaned up
-partials and tried to organize things in a way that suited me better).
+From Chaschper, I removed certain things:
+* Removed the "archive" content type
+* Decoupled the word count and the read time, so I can show only read time in articles
 
-In addition, Chaschper features additional features:
+In addition, Kashpair features additional features:
 
-* [IndieWeb](https://indieweb.org) integration
-* [IndieAuth](https://indieauth.org) integration
-* [Webmention.io](https://webmention.io/) integration
-* Optional [Matomo](https://matomo.org) analytics (see installation instructions)
-* Image Galleries (see `content/galleries`)
-* Responsive images using the `{{< figure >}}` shortcut (this replaces the regular
-  Hugo figure shortcut)
+* Added the Whatsapp & LinkedIn share buttons to the floating header
+* Added support for Google Tag Manager
+* Added ability to toggle on/off the search feature
+* Show post description in list instead of full untruncated content
 
 
 ## Theme Demo
 
-- [invisible.ch](https://invisible.ch/)
+- [albanleandri.com](https://albanleandri.com/)
 
 ## Installation
 
 Inside the folder of your Hugo site run:
 
     $ cd themes
-    $ git clone https://github.com/jcfischer/hugo-chaschper.git chaschper
+    $ git clone https://github.com/albanleandri/hugo-kashpair.git kashpair
     
 or if you plan to use [netlify](https://netlify.com) to host your site
    
-    $ git submodule add https://github.com/jcfischer/hugo-chaschper.git themes/chaschper
+    $ cd themes
+    $ git submodule add https://github.com/albanleandri/hugo-kashpair.git kashpair
    
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
-### Matomo setup
-
-If you want to use Matomo, install the Matomo theme:
-
-    $ git submodule add https://github.com/holehan/hugo-components-matomo.git themes/matomo
 
 ## Sample Configuration
 
@@ -145,8 +141,8 @@ Sample content structure is given in the `exampleSite` folder. Have fun!
 
 ### Search
 
-This theme has a search function. It uses [DuckDuckGo](https://duckduckgo.com) for a site
-specific search (be sure to set the `domain` in `config.toml`)
+The forked themes had a search function. It must be toggled on, in order to be visible in the navigation bar.
+It uses [DuckDuckGo](https://duckduckgo.com) for a site specific search, provided you have set the `domain` parameter in your `config.toml` file
 
 To get DuckDuckGo to index your domain, submit it to the 
 [Yandex Webmaster Tools](https://webmaster.yandex.com) -
@@ -175,6 +171,4 @@ Uses [Fluidbox](https://terrymun.github.io/Fluidbox/demo/index.html) to display 
 
 ## License
 
-This theme is released under the MIT license. For more information read the [License](//github.com/jcfischer/hugo-chaschper/blob/master/LICENSE.md).
-
-
+This theme is released under the MIT license. For more information read the [License](//github.com/albanleandri/hugo-kashpair/blob/master/LICENSE.md).
