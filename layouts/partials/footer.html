@@ -11,9 +11,11 @@
                     Email Me
                 </a>
             </p>
+            {{with .Site.Author.avatar }}
             <p>
-                <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" alt="Avatar"/>
+                <img class="u-photo avatar" src="{{ . }}" alt="Avatar"/>
             </p>
+            {{ end }}
             <p>
                 <span class="p-locality">{{ .Site.Params.Indieweb.city }}</span>,
                 <span class="p-country-name">{{ .Site.Params.Indieweb.country }}</span><br/>
