@@ -44,18 +44,6 @@
     color: yellow;
 }
 
-@media (min-width: 900px) {
-    .ctsingle .post-feed {
-        margin-top: -70px;
-        padding-top: 0;
-    }
-
-    .ctsingle .site-nav {
-        position: relative;
-        top: -70px;
-    }
-}
-
 @media (min-width: 795px) {
     .ctsingle .post-feed p {
         font-size: 1.8rem;
