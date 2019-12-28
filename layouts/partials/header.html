@@ -3,12 +3,6 @@
 
         {{ $style := (print "header-content-" (.Scratch.Get "header-style")) }}
 
-        <div class="site-header-content">
-
-            {{ partial $style . }}
-
-        </div>
-
         <nav class="site-nav">
             <div class="site-nav-left">
 
@@ -20,6 +14,13 @@
 
         </nav>
 
+        <div class="site-header-content">
+
+            {{ partial $style . }}
+
+        </div>
+
+        
     </div>
 </header>
 
