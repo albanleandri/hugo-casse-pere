@@ -4,7 +4,7 @@
 
 ## History
 [Kashpair](https://github.com/albanleandri/hugo-kashpair) is based on [Chaschper](https://github.com/jcfischer/hugo-chaschper)
-[Chaschper](https://github.com/jcfischer/hugo-chaschper) is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
+Thank you to Jens-Christian Fischer for his work on [Chaschper](https://github.com/jcfischer/hugo-chaschper), which is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
 
 With Kashpair, I tried to organize things in a way that suited me better.
 
@@ -14,9 +14,9 @@ From Chaschper, I removed certain things:
 
 In addition, Kashpair features additional features:
 
-* Added the Whatsapp & LinkedIn share buttons to the floating header
+* Added the Whatsapp, LinkedIn and Email share buttons to the floating header
 * Added support for Google Tag Manager
-* Added ability to toggle on/off the search feature
+* Added ability to toggle on/off the search feature, logo footer, author signature in posts
 * Show post description in list instead of full untruncated content
 
 
@@ -75,7 +75,7 @@ assetDir        = "static"
   customCSS = []
   RSSLink = ""
   showSubcribe = true
-  show_reading_time = true
+  showReadingTime = true
 
   mainSections = ["musings", "music", "code", "art"]
 
