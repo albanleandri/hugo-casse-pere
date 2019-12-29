@@ -29,7 +29,7 @@
     <meta name="yandex-verification" content="{{ . }}" />
     {{ end }}
 
-    {{ .Hugo.Generator }}
+    {{ hugo.Generator }}
 
     {{ "<!-- Indieweb -->" | safeHTML }}
     {{ with .Site.Params.Indieweb.webmention }}
