@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{ partial "head" . }}
+
+<body class="post-template">
+
+    <div class="site-wrapper">
+
+        {{ partial "header-about-page" . }}
+
+        <main id="site-main" class="site-main outer" role="main">
+            <div class="inner">
+
+                {{ partial "about-page-article" . }}
+
+            </div>
+        </main>
+
+        {{ partial "header-floating-sori" . }}
+
+        {{ partial "footer" . }}
+
+    </div>
+
+{{ partial "js" . }}
+
+</body>
+
+{{ end }}
