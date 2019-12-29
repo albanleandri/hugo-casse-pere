@@ -51,6 +51,7 @@
         <ul class="mentions-list" id="mentions-list"></ul>
     </div>
 
+    {{if .Site.Params.showAuthorSignature }}
     <footer class="post-full-footer">
         <section class="author-card">
             <section class="author-card-content">
@@ -59,4 +60,5 @@
             </section>
         </section>
     </footer>
+    {{ end }}
 </article>
