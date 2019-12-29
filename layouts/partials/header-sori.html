@@ -1,6 +1,8 @@
 <header class="site-header outer" {{if .Site.Params.cover}} style="background-image: url({{.Site.Params.cover | absURL}})" {{end}}>
     <div class="inner">
+    
 
+        
         <nav class="site-nav">
             <div class="site-nav-left">
 
@@ -14,7 +16,7 @@
 
             </div>
 
-            {{ partial "site-nav-right" . }}
+        {{ partial "site-nav-right" . }}
 
         </nav>
 
