@@ -4,8 +4,7 @@
 {{else}}<body class="page-template">{{end}}
 <div class="site-wrapper"> 
 
-{{ partial "header-sori-contact" . }}
-
+{{ partial "header-contact-page" . }}
 
 <main class="contact">
 
@@ -19,43 +18,43 @@
             
             <!-- Name -->
             <div class="row">
-            <div class="col-25">        
-                <label for="{{ $.Site.Params.form.inputNameName }}">{{ $.Site.Params.form.inputNameLabel }}</label>
-            </div>
-            <div class="col-75">
-                <input type="text" name="{{ $.Site.Params.form.inputNameName }}" placeholder="{{ $.Site.Params.form.inputNamePlaceholder }}" id="{{ $.Site.Params.form.inputNameName }}"
-                aria-labelledby="{{ $.Site.Params.form.inputNameName }}" required>
-            </div>
+                <div class="col-25">        
+                    <label for="{{ $.Site.Params.form.inputNameName }}">{{ $.Site.Params.form.inputNameLabel }}</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="{{ $.Site.Params.form.inputNameName }}" placeholder="{{ $.Site.Params.form.inputNamePlaceholder }}" id="{{ $.Site.Params.form.inputNameName }}"
+                    aria-labelledby="{{ $.Site.Params.form.inputNameName }}" required>
+                </div>
             </div>
     
             <!-- Email -->
             <div class="row">
-            <div class="col-25">
-                <label for="{{ $.Site.Params.form.inputEmailName }}">{{ $.Site.Params.form.inputEmailLabel }}</label>
-            </div>
-            <div class="col-75">
-                <input type="email" name="{{ $.Site.Params.form.inputEmailName }}" placeholder="{{ $.Site.Params.form.inputEmailPlaceholder }}"
-                id="{{ $.Site.Params.form.inputEmailName }}"
-                aria-labelledby="{{ $.Site.Params.form.InputEmailName }}" required>
-            </div>
+                <div class="col-25">
+                    <label for="{{ $.Site.Params.form.inputEmailName }}">{{ $.Site.Params.form.inputEmailLabel }}</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" name="{{ $.Site.Params.form.inputEmailName }}" placeholder="{{ $.Site.Params.form.inputEmailPlaceholder }}"
+                    id="{{ $.Site.Params.form.inputEmailName }}"
+                    aria-labelledby="{{ $.Site.Params.form.InputEmailName }}" required>
+                </div>
             </div>
     
             <!-- Message -->
             <div class="row">
-            <div class="col-25">
-                <label for="{{ $.Site.Params.form.inputMsgName }}">{{ $.Site.Params.form.inputMsgLabel }}</label>
-            </div>
-            <div class="col-75">
-                <textarea name="{{ $.Site.Params.form.inputMsgName }}" id="{{ $.Site.Params.form.inputMsgName }}" form="contactForm"
-                maxlength="{{ $.Site.Params.form.inputMsgLength }}" arial-labelledby="{{ $.Site.Params.form.InputMsgName }}" required></textarea>
-            </div>
+                <div class="col-25">
+                    <label for="{{ $.Site.Params.form.inputMsgName }}">{{ $.Site.Params.form.inputMsgLabel }}</label>
+                </div>
+                <div class="col-75">
+                    <textarea name="{{ $.Site.Params.form.inputMsgName }}" id="{{ $.Site.Params.form.inputMsgName }}" form="contactForm"
+                    maxlength="{{ $.Site.Params.form.inputMsgLength }}" arial-labelledby="{{ $.Site.Params.form.InputMsgName }}" required></textarea>
+                </div>
             </div>
     
             <!-- Submit -->
             <div class="row">
-            <button class="submit-contact-form" type="submit" onclick="cleanForm" aria-label="{{ $.Site.Params.form.inputSubmitValue }}">
-                {{ $.Site.Params.form.inputSubmitValue }}
-            </button>
+                <button class="submit-contact-form" type="submit" onclick="cleanForm" aria-label="{{ $.Site.Params.form.inputSubmitValue }}">
+                    {{ $.Site.Params.form.inputSubmitValue }}
+                </button>
             </div>
                 
             </form>
