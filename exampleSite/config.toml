@@ -4,6 +4,7 @@ theme           = [ "hugo-chaschper" ] # add "matomo" if you want matomo trackin
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
+#SectionPagesMenu = "main"
 canonifyurls    = true
 assetDir        = "static"
 
@@ -30,7 +31,8 @@ assetDir        = "static"
   RSSLink = "" # "/post/index.xml" for RSS feed of "post" content type
   showSubcribe = true
   showSearch = false
-  show_reading_time = true
+  showReadingTime = true
+  showAuthorSignature = false
 
   mainSections = ["musings", "music", "code", "art"]
 
