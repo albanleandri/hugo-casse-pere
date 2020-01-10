@@ -1,6 +1,6 @@
 baseurl         = "https://example.com"
-title           = "Chaschper - Hugo. HTML. Gallery. Art"
-theme           = [ "hugo-chaschper" ] # add "matomo" if you want matomo tracking
+title           = "Casse-pere - Hugo. Blog"
+theme           = [ "hugo-casse-pere" ] # add "matomo" if you want matomo tracking
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
@@ -9,21 +9,21 @@ canonifyurls    = true
 assetDir        = "static"
 
 [author]
-    name    = "Jens-Christian Fischer"
-    nick    = "jcfischer"
-    email   = "jens-christian@invisible.ch"
+    name    = "Alban Leandri"
+    nick    = "aleandri"
+    email   = "alban.leandri@gmail.com"
     avatar  = "/img/avatar.jpg"
-    description = "Maker. Musician"
+    description = "Engineer. PM. Marketer"
     website = "https://my-website.com"
 
 [params]
-  title       = "Invisible"
-  domain      = "invisible.ch"
-  subtitle    = "Hugo. HTML. Gallery. Art"
-  copyright   = "© 2018"
+  title       = "My Blog"
+  domain      = "albanleandri.com"
+  subtitle    = "Hugo. HTML. Blog"
+  copyright   = "© 2019"
 
   cover       = "img/blog-cover.jpg"
-  description = "Portfolio and Blog for Chaschper"
+  description = "Portfolio and Blog for Casse-Pere"
   metaDescription = ""
   googleAnalytics = ""
   googleTagManager = "GTM-XXXXXXX"
@@ -36,12 +36,12 @@ assetDir        = "static"
 
   mainSections = ["musings", "music", "code", "art"]
 
-  twitterName = "jcfischer"
-  fbName = "JensChristianFischer"
-  githubName = "jcfischer"
-  linkedinName = "jenscfischer"
-  keybaseName = "jcfischer"
-  flickrName = "jcfischer"
+  twitterName = "yourhandle"
+  fbName = "yourhandle"
+  githubName = "yourhandle"
+  linkedinName = "yourhandle"
+  keybaseName = "yourhandle"
+  flickrName = "yourhandle"
 
 
   pageNotFoundTitle = "404 - Page not found"
@@ -88,8 +88,8 @@ assetDir        = "static"
 # with the above email/social network parameters.
 [params.Indieweb]
     country = "Switzerland"
-    city = "Zurich"
-    webmention = "invisible.ch"
+    city = "Geneva"
+    webmention = "albanleandri.com"
 
 
 # Enable this section for Matomo analytics. You will need to install
