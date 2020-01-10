@@ -10,10 +10,10 @@ assetDir        = "static"
 
 [author]
     name    = "Alban Leandri"
-    nick    = "aleandri"
+    nick    = "albanleandri"
     email   = "alban.leandri@gmail.com"
     avatar  = "/img/avatar.jpg"
-    description = "Engineer. PM. Marketer"
+    description = "Product Manager. Marketer. Engineer"
     website = "https://my-website.com"
 
 [params]
@@ -23,7 +23,7 @@ assetDir        = "static"
   copyright   = "© 2019"
 
   cover       = "img/blog-cover.jpg"
-  description = "Portfolio and Blog for Casse-Pere"
+  description = "Blog Example"
   metaDescription = ""
   googleAnalytics = ""
   googleTagManager = "GTM-XXXXXXX"
