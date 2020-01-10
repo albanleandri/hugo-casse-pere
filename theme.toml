@@ -4,7 +4,7 @@ licenselink = "https://github.com/albanleandri/hugo-casse-pere/blob/master/LICEN
 description = "Based on Casper 2, simplified, IndieWeb, Gallery"
 homepage = "https://github.com/albanleandri/hugo-casse-pere"
 tags = ["blog","pages", "ghost theme", "indieweb", "gallery"]
-features = ["indieweb", "matomo"]
+features = ["indieweb"]
 min_version=0.41
 
 [author]

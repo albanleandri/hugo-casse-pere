@@ -1,6 +1,6 @@
 baseurl         = "https://example.com"
 title           = "Casse-pere - Hugo. Blog"
-theme           = [ "hugo-casse-pere" ] # add "matomo" if you want matomo tracking
+theme           = [ "hugo-casse-pere" ]
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
@@ -90,18 +90,3 @@ assetDir        = "static"
     country = "Switzerland"
     city = "Geneva"
     webmention = "albanleandri.com"
-
-
-# Enable this section for Matomo analytics. You will need to install
-# the "matomo" theme and enable it in the themes setting above
-
-# [params.matomo]
-#     url = "https://matomo.invisible.ch"
-#     id = 1
-#
-# [params.matomo.track]
-#     button = "Enable Analytics"
-#     message = "Your visits will be logged."
-# [params.matomo.block]
-#     button = "Disable Analytics"
-#     message = "Your visits will *not* be logged."

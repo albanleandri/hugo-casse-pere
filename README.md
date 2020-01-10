@@ -7,7 +7,7 @@
 
 Thank you to Jens-Christian Fischer for his work on [Chaschper](https://github.com/jcfischer/hugo-chaschper). Chaschper is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
 
-With Kashpair, I tried to organize things in a way that suited me better.
+With Casse-pere, I tried to organize things in a way that suited me better.
 
 * Moved the navigation bar on top of the page
 * Added the Whatsapp, LinkedIn and Email share buttons to the floating header
@@ -17,6 +17,7 @@ With Kashpair, I tried to organize things in a way that suited me better.
 * Removed the "archive" content type
 * Decoupled the word count and the read time, so I can show only read time in articles
 * Fixed some screen width responsivity issues arout the 900px breakpoint
+* Removed Matomo, as Google Analytics is free, and suited me
 
 ## Theme Demo
 
@@ -43,9 +44,9 @@ For more information read the official [setup guide](//gohugo.io/overview/instal
 The following `config.toml` is used for the demo site. 
 
 ```toml
-baseurl         = "https://invisible.ch/"
-title           = "Invisible - Musings. Music. Code. Art"
-theme           = [ "casse-pere", "matomo" ]
+baseurl         = "https://example.com/"
+title           = "Blog Example"
+theme           = [ "casse-pere" ]
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
@@ -75,13 +76,13 @@ assetDir        = "static"
   showSubcribe = true
   showReadingTime = true
 
-  mainSections = ["musings", "music", "code", "art"]
+  mainSections = ["music", "code"]
 
-  twitterName = "jcfischer"
-  fbName = "JensChristianFischer"
-  githubName = "jcfischer"
-  linkedinName = "jenscfischer"
-  keybaseName = "jcfischer"
+  twitterName = "yourhandlehere"
+  fbName = "yourhandlehere"
+  githubName = "yourhandlehere"
+  linkedinName = "yourhandlehere"
+  keybaseName = "yourhandlehere"
 
 
   pageNotFoundTitle = "404 - Page not found"
@@ -120,19 +121,9 @@ assetDir        = "static"
 # with the above email/social network parameters.
 [params.IndieWeb]
     Country = "Switzerland"
-    City = "Zurich"
-    webmention = "invisible.ch"
+    City = "Geneva"
+    webmention = "example.com"
 
-[params.matomo]
-    url = "https://matomo.invisible.ch"
-    id = 1
-
-[params.matomo.track]
-    button = "Enable Analytics"
-    message = "Your visits will be logged."
-[params.matomo.block]
-    button = "Disable Analytics"
-    message = "Your visits will *not* be logged."
 ```
 
 Sample content structure is given in the `exampleSite` folder. Have fun!
