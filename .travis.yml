@@ -13,5 +13,5 @@ install:
 
 script:
   - cd exampleSite
-  - hugo --themesDir ../.. -t casse-pere -v
+  - hugo --themesDir ../.. -t hugo-casse-pere -v
   - htmlproofer public --check-html --disable-external
