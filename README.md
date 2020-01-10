@@ -1,9 +1,9 @@
-# Kashpair
+# Casse-pere
 
-[![Build Status](https://travis-ci.org/albanleandri/hugo-kashpair.svg?branch=master)](https://travis-ci.org/albanleandri/hugo-kashpair)
+[![Build Status](https://travis-ci.org/albanleandri/hugo-casse-pere.svg?branch=master)](https://travis-ci.org/albanleandri/hugo-casse-pere)
 
 ## History
-[Kashpair](https://github.com/albanleandri/hugo-kashpair) is based on [Chaschper](https://github.com/jcfischer/hugo-chaschper).
+[Casse-pere](https://github.com/albanleandri/hugo-casse-pere) is based on [Chaschper](https://github.com/jcfischer/hugo-chaschper).
 
 Thank you to Jens-Christian Fischer for his work on [Chaschper](https://github.com/jcfischer/hugo-chaschper). Chaschper is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
 
@@ -27,12 +27,12 @@ With Kashpair, I tried to organize things in a way that suited me better.
 Inside the folder of your Hugo site run:
 
     $ cd themes
-    $ git clone https://github.com/albanleandri/hugo-kashpair.git kashpair
+    $ git clone https://github.com/albanleandri/hugo-casse-pere.git casse-pere
     
 or if you plan to use [netlify](https://netlify.com) to host your site
    
     $ cd themes
-    $ git submodule add https://github.com/albanleandri/hugo-kashpair.git kashpair
+    $ git submodule add https://github.com/albanleandri/hugo-casse-pere.git casse-pere
    
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
@@ -45,7 +45,7 @@ The following `config.toml` is used for the demo site.
 ```toml
 baseurl         = "https://invisible.ch/"
 title           = "Invisible - Musings. Music. Code. Art"
-theme           = [ "chaschper", "matomo" ]
+theme           = [ "casse-pere", "matomo" ]
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
@@ -54,20 +54,20 @@ assetDir        = "static"
 
 
 [author]
-    name    = "Jens-Christian Fischer"
-    nick    = "jcfischer"
-    email   = "jens-christian@invisible.ch"
+    name    = "Alban Leandri"
+    nick    = "aleandri"
+    email   = "alban.leandri@gmail.com"
     avatar  = ""
-    description = "Maker. Musician"
+    description = "Product Manager. Marketer. Engineer"
 
 [params]
-  title       = "Invisible"
-  domain      = "invisible.ch"
-  subtitle    = "Musings. Music. Code. Art"
-  copyright   = "© 2018"
+  title       = "Blog"
+  domain      = "blog.com"
+  subtitle    = "Stuffs. Stuffs. Stuffs"
+  copyright   = "© 2019"
 
   cover       = "img/blog-cover.jpg"
-  description = "Portfolio and Blog of Jens-Christian Fischer"
+  description = "Blog"
   metaDescription = ""
   googleAnalytics = ""
   customCSS = []

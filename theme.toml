@@ -1,15 +1,15 @@
-name = "Chaschper"
+name = "Casse-pere"
 license = "MIT"
-licenselink = "https://github.com/jcfischer/hugo-chaschper/blob/master/LICENSE.md"
+licenselink = "https://github.com/jcfischer/hugo-casse-pere/blob/master/LICENSE.md"
 description = "Based on Casper 2, simplified, IndieWeb, Gallery"
-homepage = "https://github.com/jcfischer/hugo-chaschper"
+homepage = "https://github.com/albanleandri/hugo-casse-pere"
 tags = ["blog","pages", "ghost theme", "indieweb", "gallery"]
 features = ["indieweb", "matomo"]
 min_version=0.41
 
 [author]
-  name = "Jens-Christian Fischer"
-  homepage = "https:/invisible.ch"
+  name = "Alban Leandri"
+  homepage = "https:/albanleandri.com"
 
 [original]
   name = "Casper-Two"

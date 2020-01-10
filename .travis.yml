@@ -14,5 +14,5 @@ install:
 
 script:
   - cd exampleSite
-  - hugo --themesDir ../.. -t casper-two-chaschper -v
+  - hugo --themesDir ../.. -t casse-pere -v
   - htmlproofer public --check-html --disable-external
