@@ -2,6 +2,7 @@ env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   matrix:
+    - HUGO_VERSION="0.62"
     - HUGO_VERSION="0.53"
     - HUGO_VERSION="0.44"
 
@@ -13,5 +14,5 @@ install:
 
 script:
   - cd exampleSite
-  - hugo --themesDir ../.. -t hugo-chaschper -v
+  - hugo --themesDir ../.. -t casper-two-chaschper -v
   - htmlproofer public --check-html --disable-external
