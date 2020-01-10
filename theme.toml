@@ -10,6 +10,7 @@ min_version=0.41
 [author]
   name = "Alban Leandri"
   homepage = "https://albanleandri.com"
+  repo = "https://github.com/albanleandri"
 
 [original]
   name = "Casper-Two"
