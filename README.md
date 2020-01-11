@@ -72,7 +72,7 @@ assetDir        = "static"
   metaDescription = ""
   googleAnalytics = ""
   customCSS = []
-  RSSLink = ""
+  RSSLinkPost = ""
   showSubcribe = true
   showReadingTime = true
 
