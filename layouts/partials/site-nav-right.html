@@ -2,11 +2,13 @@
     {{ partial "social-links" . }}
 
     {{ if .Site.Params.RSSLink }}
-    <a class="subscribe-button" href="{{.Site.Params.RSSLink }}">Subscribe</a>
+        <a class="subscribe-button" href="{{.Site.Params.RSSLink }}">Subscribe to my RSS Feed</a>
     {{else if .Site.Params.showSubscribe }}
-    <a class="subscribe-button" href="{{if .IsNode }}{{ .RSSLink }}{{ else }}{{ "index.xml" | absURL }}{{end}}">Subscribe</a>
+        <a class="subscribe-button" href="{{if .IsNode }}{{ .RSSLink }}{{ else }}{{ "index.xml" | absURL }}{{end}}">Subscribe</a>
     {{end}}
+
     {{ if .Site.Params.showSearch }}
-    {{ partial "search" . }}
+        {{ partial "search" . }}
     {{end}}
+
 </div>
