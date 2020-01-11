@@ -32,16 +32,20 @@ assetDir        = "static"
   showSubcribe = true
   showSearch = false
   showReadingTime = true
-  showAuthorSignature = false
+  showAuthorSignatureFooterArticle = true
+  showAuthorSignatureFooterCard = true # At the bottom of articles or in /post page, card will display the author information
+
 
   mainSections = ["musings", "music", "code", "art"]
 
-  twitterName = "yourhandle"
-  fbName = "yourhandle"
-  githubName = "yourhandle"
-  linkedinName = "yourhandle"
-  keybaseName = "yourhandle"
-  flickrName = "yourhandle"
+
+  twitterName = "Alban_Leandri"
+  fbName = "alb.lan.5"
+  githubName = "albanleandri"
+  linkedinName = "albanleandri"
+  mediumName = "alban.leandri"
+  keybaseName = ""
+  flickrName = ""
 
 
   pageNotFoundTitle = "404 - Page not found"
