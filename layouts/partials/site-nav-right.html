@@ -1,10 +1,8 @@
 <div class="site-nav-right">
     {{ partial "social-links" . }}
-
-    {{ if .Site.Params.RSSLink }}
-        <a class="subscribe-button" href="{{.Site.Params.RSSLink }}">Subscribe to my RSS Feed</a>
-    {{else if .Site.Params.showSubscribe }}
-        <a class="subscribe-button" href="{{if .IsNode }}{{ .RSSLink }}{{ else }}{{ "index.xml" | absURL }}{{end}}">Subscribe</a>
+   
+    {{ if .Site.Params.showSubcribe }}
+        {{ partial "rss-subscribe" . }}       
     {{end}}
 
     {{ if .Site.Params.showSearch }}
