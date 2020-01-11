@@ -799,8 +799,6 @@ body {
     font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: .5px;
-    text-transform: uppercase;
-    display: none;
 }
 
 @media (min-width: 795px) {
@@ -1460,8 +1458,8 @@ body {
 
 .author-card .author-profile-image {
     margin-right: 15px;
-    width: 60px;
-    height: 60px
+    width: 40px;
+    height: 40px
 }
 
 .author-card-name {

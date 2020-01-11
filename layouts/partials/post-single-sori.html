@@ -51,10 +51,11 @@
         <ul class="mentions-list" id="mentions-list"></ul>
     </div>
 
-    {{if .Site.Params.showAuthorSignature }}
+    {{if .Site.Params.showAuthorSignatureFooterArticle }}
     <footer class="post-full-footer">
         <section class="author-card">
             <section class="author-card-content">
+                <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
                 <span class="author-card-name p-author">{{.Params.author | default .Site.Author.name}}</span>
                 <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
             </section>

@@ -1,11 +1,13 @@
 {{ $pages := ((where .Site.Pages "Type" "post") | shuffle) }}
-{{ range first 3 $pages}}
 
-{{ if eq .Type "post" }}
-{{ partial "article-card.html" . }}
-{{ end }}
-{{ if eq .Type "gallery" }}
-{{ partial "gallery-card.html" . }}
-{{ end }}
+    {{ range first 3 $pages}}
 
-{{ end }}
+        {{ if eq .Type "post" }}
+            {{ partial "article-card.html" . }}
+        {{ end }}
+        
+        {{ if eq .Type "gallery" }}
+            {{ partial "gallery-card.html" . }}
+        {{ end }}
+
+    {{ end }}

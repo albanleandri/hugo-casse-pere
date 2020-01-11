@@ -1,13 +1,14 @@
 {{ $types := (slice "post" "gallery") }}
 {{ $paginator := .Paginate  (where .Data.Pages.ByDate.Reverse "Type" "in" $types) }}
 
-{{ range $paginator.Pages }}
+    {{ range $paginator.Pages }}
 
-{{ if eq .Type "post" }}
-{{ partial "article-card.html" . }}
-{{ end }}
-{{ if eq .Type "gallery" }}
-{{ partial "gallery-card.html" . }}
-{{ end }}
+        {{ if eq .Type "post" }}
+            {{ partial "article-card.html" . }}
+        {{ end }}
+        
+        {{ if eq .Type "gallery" }}
+            {{ partial "gallery-card.html" . }}
+        {{ end }}
 
-{{ end }}
+    {{ end }}
