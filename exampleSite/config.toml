@@ -7,6 +7,7 @@ paginate        = 6
 #SectionPagesMenu = "main"
 canonifyurls    = true
 assetDir        = "static"
+enableRobotsTXT = "true"
 
 [author]
     name    = "Alban Leandri"
@@ -94,3 +95,7 @@ assetDir        = "static"
     country = "Switzerland"
     city = "Geneva"
     webmention = "albanleandri.com"
+
+[sitemap]
+  ChangeFreq = "weekly"
+  Priority = "1"
