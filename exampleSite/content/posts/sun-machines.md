@@ -1,12 +1,13 @@
 ---
-title: "Sun Machines"
-author: "Jens-Christian Fischer"
+title: "Sun and clouds"
+author: "Alban Leandri"
 date: 2018-12-30T14:51:53+01:00
 categories: ["art"]
-tags: ["duo", "experimental"]
+tags: ["landscape", "nature"]
 language: en
 slug:
 type: post
+robotsdisallow: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

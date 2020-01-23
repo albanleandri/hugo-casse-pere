@@ -7,6 +7,7 @@ tags: ["tech", "blog", "iOS"]
 language: en
 slug:
 type: post
+robotsdisallow: false
 ---
 
 Having a git based blog makes it slightly 

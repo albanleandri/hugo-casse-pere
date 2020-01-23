@@ -9,6 +9,7 @@ tags: ["indieweb"]
 language: en
 slug:
 type: post
+robotsdisallow: false
 ---
 
 I wrote about the Intro to Indieweb yesterday. Reading up on it, starting to

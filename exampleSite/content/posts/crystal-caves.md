@@ -8,6 +8,7 @@ categories: ["music"]
 tags: ["music", "album"]
 resources: []
 type: post
+robotsdisallow: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
