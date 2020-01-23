@@ -4,7 +4,6 @@
 
 ## History
 [Casse-pere](https://github.com/albanleandri/hugo-casse-pere) is based on [Chaschper](https://github.com/jcfischer/hugo-chaschper).
-
 Thank you to Jens-Christian Fischer for his work on [Chaschper](https://github.com/jcfischer/hugo-chaschper). Chaschper is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
 
 With Casse-pere, I tried to organize things in a way that suited me better.
@@ -12,6 +11,7 @@ With Casse-pere, I tried to organize things in a way that suited me better.
 * Moved the navigation bar on top of the page
 * Added the Whatsapp, LinkedIn and Email share buttons to the floating header
 * Added support for Google Tag Manager
+* Added support for robots.txt and sitemap.xml generation
 * Added ability to toggle on/off the search feature, logo footer, author signature in posts
 * Show post description in list instead of full untruncated content
 * Removed the "archive" content type
