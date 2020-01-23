@@ -20,6 +20,12 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    {{ with .Params.robotsdisallow }}
+        <meta name="robots" content="noindex, nofollow, noarchive">
+    {{ else }}
+        <meta name="robots" content="index, follow, archive">
+    {{ end }}
+
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />
     <link rel="canonical" href="{{ .Permalink }}" />
 
@@ -46,7 +52,7 @@
 
     {{ "<!-- Stylesheets -->" | safeHTML }}
     <link rel="stylesheet" type="text/css" href="{{ "built/screen.css" | absURL}}" />
-    <link rel="stylesheet" type="text/css" href="{{ "css/casse-pair.css" | absURL}}" />
+    <link rel="stylesheet" type="text/css" href="{{ "css/casse-pere.css" | absURL}}" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css" />
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
