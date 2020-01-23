@@ -4,17 +4,8 @@
         {{ $style := (print "header-content-" (.Scratch.Get "header-style")) }}
 
         <nav class="site-nav">
-            <div class="site-nav-left">
 
-                {{ if .Site.Params.logo }}
-                    <a class="site-nav-logo" href="#">
-                        <img src="{{ .Site.Params.logo  | absURL}}" alt="{{ .Site.Params.Title }}"/>
-                    </a>
-                {{ end }}
-
-                {{ partial "site-menu" . }}
-                
-            </div>
+            {{ partial "site-nav-left" . }}
 
             {{ partial "site-nav-right" . }}
 
