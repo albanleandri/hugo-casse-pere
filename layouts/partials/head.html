@@ -29,8 +29,11 @@
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{ if .IsPage }} <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" /> {{ else }}
-    <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" /> {{ end }}
+    {{ if .IsPage }}
+        <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" />
+    {{ else }}
+        <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" />
+    {{ end }}
 
     {{ partial "meta-twitter" . }}
     {{ partial "meta-facebook" . }}

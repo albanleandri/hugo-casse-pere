@@ -1,25 +1,24 @@
-{{ if .IsPage }} <!-- Credit V JEANTET -->
-
-{{ if eq .Type "gallery" }}
-    {{ $path := .Dir }}
-
-    {{ $folder := (print "content/" $path ) }}
-
-    {{ $files := readDir $folder }}
-    {{ range first 1 $files }}
-    <meta name="twitter:image" content="{{ (print $path .Name) | absURL}}"/>
-{{ end }}
-{{ else }}
-    {{ with .Params.image }}
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="{{ .  | absURL }}"/>
+{{ if .IsPage }}
+    {{ if eq .Type "gallery" }}
+        {{ $path := .Dir }}
+        {{ $folder := (print "content/" $path ) }}
+        {{ $files := readDir $folder }}
+        {{ range first 1 $files }}
+        <meta name="twitter:image" content="{{ (print $path .Name) | absURL}}"/>
+        {{ end }}
     {{ else }}
-    <meta name="twitter:card" content="summary"/>
+        {{ with .Params.image }}
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:image" content="{{ .  | absURL }}"/>
+        {{ else }}
+            <meta name="twitter:card" content="summary"/>
+        {{ end }}
     {{ end }}
-{{ end }}
 {{ else }}
     <meta name="twitter:card" content="summary"/>
-    {{ with .Site.Params.cover }}<meta name="twitter:image" content="{{ . | absURL }}"/>{{ end }}
+    {{ with .Site.Params.cover }}
+        <meta name="twitter:image" content="{{ . | absURL }}"/>
+    {{ end }}
 {{ end }} <!-- Twitter Card data -->
     <meta name="twitter:title" content="{{ .Title }}"/>
     <meta name="twitter:description" content="{{if .IsPage}}{{ .Description | default (substr .Summary 0 160) }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
