@@ -19,7 +19,7 @@ enableRobotsTXT = "true"
 
 [params]
   title       = "My Blog"
-  domain      = "albanleandri.com"
+  domain      = "example-site.com"
   subtitle    = "Hugo. HTML. Blog"
   copyright   = "© 2019"
 
