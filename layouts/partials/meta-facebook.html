@@ -1,4 +1,4 @@
-<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:site_name" content="{{ .Site.Params.Title }}" />
 <meta property="og:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Params.Title }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{if .Site.Params.fbName}}

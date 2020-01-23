@@ -11,9 +11,9 @@
 
     <title>
         {{ if .IsHome }}
-            {{ .Site.Title }}
+            {{ .Site.Params.Title }}
         {{ else }}
-            {{ .Title }} &middot; {{ .Site.Title }}
+            {{ .Title }} &middot; {{ .Site.Params.Title }}
         {{ end }}
     </title>
 
@@ -61,10 +61,10 @@
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
 
     {{ if .Site.Params.RSSLinkPost}}
-        <link href="{{.Site.Params.RSSLinkPost }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{.Site.Params.RSSLinkPost }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Params.Title }}" />
     {{else}}
         {{ if eq .URL "/" }}
-            <link href="{{ "index.xml" | absURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+            <link href="{{ "index.xml" | absURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Params.Title }}" />
         {{ end }}
     {{ end }}
 
