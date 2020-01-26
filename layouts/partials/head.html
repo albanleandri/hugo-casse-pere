@@ -29,10 +29,14 @@
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{ if .IsPage }}
-        <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" />
+    {{if .IsHome}}
+        <meta name="description" content="{{ substr .Site.Params.description 0 160 }}" />
+    {{ else if .IsPage }}
+        <meta name="description" content="{{ .Params.metadescription | default (substr .Summary 0 160) }}" />
+    {{ else if .IsNode }}
+        <meta name="description" content='Read my posts about "{{ .Title }}". {{ .Site.Params.description }}' />
     {{ else }}
-        <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" />
+        <meta name="description" content="{{ .Params.metadescription | default .Site.Params.description }}" />
     {{ end }}
 
     {{ partial "meta-twitter" . }}
