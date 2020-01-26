@@ -1,15 +1,25 @@
 {{ partial "head" . }}
 
-{{if ne .Site.Params.singleViewStyle "casper"}}<body class="ctsingle">
-{{else}}<body class="page-template">{{end}}
+{{if ne .Site.Params.singleViewStyle "casper"}}
+    <body class="ctsingle">
+{{else}}
+    <body class="page-template">
+{{end}}
+
 <div class="site-wrapper"> 
 
-{{ partial "header-contact-page" . }}
+    {{ partial "header-contact-page" . }}
 
-{{ partial "contact-form" . }}
+    {{ partial "contact-form" . }}
 
-{{ partial "footer" . }}
-</div>{{ partial "js" . }}</body></html>
+    {{ partial "footer" . }}
+
+</div>
+
+{{ partial "js" . }}
+
+</body>
+</html>
 
 
 
