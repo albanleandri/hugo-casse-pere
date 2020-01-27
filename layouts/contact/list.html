@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" />
+
 {{ partial "head" . }}
 
 {{if ne .Site.Params.singleViewStyle "casper"}}
