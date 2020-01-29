@@ -12,6 +12,12 @@
     <title>
         {{ if .IsHome }}
             {{ .Site.Params.Title }}
+        {{ else if eq .Type "post" }}
+            {{ .Title }}
+        {{ else if eq .Type "gallery" }}
+            {{ .Title }} | {{ .Site.Params.Title }}
+        {{ else if eq .Type "contact" }}
+            {{ .Title }} | {{ .Site.Params.Title }}
         {{ else if .IsNode }}
             Read more posts about {{ .Title }} | {{ .Site.Params.Title }}
         {{ else }}
