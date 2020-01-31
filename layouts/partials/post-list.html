@@ -1,5 +1,4 @@
-{{ $types := (slice "post" "gallery") }}
-{{ $paginator := .Paginate  (where .Data.Pages.ByDate.Reverse "Type" "in" $types) }}
+{{ $paginator := .Paginate .Site.RegularPages }}
 
     {{ range $paginator.Pages }}
 
