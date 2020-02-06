@@ -28,6 +28,7 @@ enableRobotsTXT = "true"
   metaDescription = ""
   googleAnalytics = ""
   googleTagManager = "GTM-XXXXXXX"
+  gtmDebug          = false
   customCSS = []
   RSSLinkPost = "" # "/post/index.xml" for RSS feed of "post" content type
   showSubcribe = true

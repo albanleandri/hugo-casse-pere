@@ -21,7 +21,7 @@
     </div>
 </header>
 
-{{ if not .Site.IsServer }}
+{{ if or (.Site.Params.gtmDebug) (not .Site.IsServer) }}
     {{ if $.Site.Params.googleTagManager }}
         {{ partial "gtm-noscript-tag" . }}
     {{ end }}
