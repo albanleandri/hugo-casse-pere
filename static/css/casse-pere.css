@@ -248,3 +248,40 @@ input, select, textarea{
 	  }
   }
 
+
+/* Tweet this */
+  .tweet-this {
+	background: #fff !important;
+	border: 1px solid #ccc !important;
+	padding: 0.6em 1em !important;
+	font-size: 1.3em !important;
+}
+.tweet-this > p {
+	letter-spacing: 1px !important;
+	line-height: 1.42 !important;
+}
+.tweet-this > p > a {
+	text-decoration: none !important;
+    color: #555 !important;
+    box-shadow: none !important;
+}
+.tweet-this > p > a:hover {
+	color: #333 !important;
+}
+.tweet-this > a {
+	color: #55acee !important;
+	text-decoration: none !important;
+	display: block !important;
+	text-align: right !important;
+    font-size: 0.8em !important;
+    box-shadow: none !important;
+}
+.tweet-this > a > i {
+	margin-right: 0.3em !important;
+	vertical-align: middle !important;
+}
+
+.tweet-this svg {
+    width: 24px;
+    margin: 10px;
+}
