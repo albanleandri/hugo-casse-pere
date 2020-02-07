@@ -1783,7 +1783,8 @@ body {
 .floating-header-share-tw,
 .floating-header-share-wa,
 .floating-header-share-lk,
-.floating-header-share-em {
+.floating-header-share-em,
+.floating-header-add-bookmark {
     display: block;
     -ms-flex-align: center;
     -ms-grid-row-align: center;
@@ -1814,6 +1815,10 @@ body {
 
 .floating-header-share-em {
 	background: #D44638
+}
+
+.floating-header-add-bookmark {
+	background: black
 }
 
 .progress {
