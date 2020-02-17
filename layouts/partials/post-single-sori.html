@@ -21,12 +21,12 @@
             */}}
             {{ if (or (eq (.Param "showReadingTime") true) (eq $section.Params.showReadingTime true) )}}
             <div class="reading-time">
-                <span>{{ .ReadingTime}} minutes read</span>
+                <span>{{ .ReadingTime }} minutes read</span>
             </div>
 
             {{ end }}
         </section>
-        <h1 class="post-full-title p-name">{{.Title}}</h1>
+        <h1 class="post-full-title p-name">{{ .Title }}</h1>
     </header>
     {{if .Params.image}}
     {{ $img := resources.Get .Params.image }}
@@ -58,8 +58,19 @@
                 <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
                 <span class="author-card-name p-author">{{.Params.author | default .Site.Author.name}}</span>
                 <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
+
+                {{if .Site.Params.showTweetAThanks }}
+                <p><i>If you read this far, why don't you tweet to the author to show them you care. <a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.twitterName}} for writing this helpful article!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">Tweet a thanks!</a></i></i></p>
+                {{ end }}
+
             </section>
         </section>
     </footer>
     {{ end }}
+
+
+
+
+
+
 </article>
