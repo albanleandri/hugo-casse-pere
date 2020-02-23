@@ -60,7 +60,7 @@
                 <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
 
                 {{if .Site.Params.showTweetAThanks }}
-                    <p><i>Thanks for reading this far, why don't you <a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">tweet a thanks</a> to the author to show him you care.</i></i></p>
+                    <p><i>Thanks for reading this far. Why don't you <a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">tweet a thanks</a> to the author to show him you care.</i></i></p>
                 {{ end }}
 
             </section>
