@@ -41,13 +41,14 @@ enableRobotsTXT = "true"
   mainSections = ["musings", "music", "code", "art"]
 
 
-  twitterName = "Alban_Leandri"
-  fbName = "alb.lan.5"
-  githubName = "albanleandri"
-  linkedinName = "albanleandri"
-  mediumName = "alban.leandri"
-  keybaseName = ""
-  flickrName = ""
+  twitterName   = "Alban_Leandri"
+  fbName        = "alb.lan.5"
+  githubName    = "albanleandri"
+  linkedinName  = "albanleandri"
+  mediumName    = "alban.leandri"
+  goodReads     = "108173868"
+  keybaseName   = ""
+  flickrName    = ""
 
 
   pageNotFoundTitle = "404 - Page not found"
