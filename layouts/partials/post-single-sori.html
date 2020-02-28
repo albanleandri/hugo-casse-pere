@@ -28,17 +28,23 @@
         </section>
         <h1 class="post-full-title p-name">{{ .Title }}</h1>
     </header>
+
     {{if .Params.image}}
-    {{ $img := resources.Get .Params.image }}
-    {{ with $img }}
-        <figure class="post-card-image" style="background-image: url({{ (.Fill "1200x600").Permalink }})">
-        </figure>
-    {{ end }}
+
+        {{ $img := resources.Get .Params.image }}
+
+        {{ with $img }}
+            <figure class="post-card-image" 
+                    style="background-image: url({{ (.Fill "1200x600").Permalink }})">
+            </figure>
+        {{ end }}
 
     {{else}}
+
         <figure class="post-card-image"
-                style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)">
+                style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 23 | shuffle) 0 }}.jpg)">
         </figure>
+
     {{end}}
 
     <section class="post-full-content">
@@ -60,7 +66,7 @@
                 <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
 
                 {{if .Site.Params.showTweetAThanks }}
-                    <p><i>Thanks for reading this far. Feel free to <a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">tweet me a thanks</a> if you liked this article.</i></i></p>
+                    <p><i>Thanks for reading my blog! Don't hesite to <a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">tweet me a thanks</a> if you liked this article.</i></i></p>
                 {{ end }}
 
             </section>
