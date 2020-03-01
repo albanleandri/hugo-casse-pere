@@ -18,28 +18,38 @@ enableRobotsTXT = "true"
     website = "https://www.albanleandri.com"
 
 [params]
-  title       = "My Blog"
-  domain      = "example-site.com"
-  subtitle    = "Hugo. HTML. Blog"
-  copyright   = "© 2019"
+  domain          = "albanleandri.com"
+  title           = "Alban's Blog"
+  subtitle        = "Practical… a bit technical… mostly interesting :)"
+  copyright       = "AL Production © 2019"
+  cover           = "img/blog-cover.jpg"
+  logo            = ""
+  description     = "This is my personal blog where I share some of the things I've learned, few stories and other information I hope you will enjoy."
+  metaDescription = "This is my personal blog where I share some of the things I've learned, few stories and other information I hope you will enjoy."
+  pageNotFoundTitle                 = "404 - Page not found"
+  googleSiteVerification            = "xxxxxxxxxxxxxxxxxxxxxxx"
+  yandexSiteVerification            = "xxxxxxxxxxxxxxxxxxxxxxx"
+  googleAnalyticsId                 = ""                # Standalone Google Analytics. Leave empty if you prefer to use GA through Google Tag Manager
+  enableGaDebug                     = false             # Will enable GA on localhost too for dev/debug purpose
+  googleTagManagerId                = "GTM-XXXXXXX"
+  enableGtmDebug                    = false              # Will enable GTM on localhost too for dev/debug purpose
+  customCSS                         = []
+  RSSLinkPost                       = "/post/index.xml"
+  showSubcribe                      = true
+  showSearch                        = false             # Make sure the "domain" parameter is set for site-specific search
+  showReadingTime                   = true
+  showAuthorSignatureFooterArticle  = true
+  showAuthorSignatureFooterCard     = true              # At the bottom of articles or in /post page, card will display the author information
+  showTweetAThanks                  = true
 
-  cover       = "img/blog-cover.jpg"
-  description = "Blog Example"
-  metaDescription = ""
-  googleAnalytics = ""
-  enableGaDebug = false
-  googleTagManagerId = "GTM-XXXXXXX"
-  enableGtmDebug          = true
-  customCSS = []
-  RSSLinkPost = "" # "/post/index.xml" for RSS feed of "post" content type
-  showSubcribe = true
-  showSearch = false
-  showReadingTime = true
-  showAuthorSignatureFooterArticle = true
-  showAuthorSignatureFooterCard = true # At the bottom of articles or in /post page, card will display the author information
 
-
-  mainSections = ["musings", "music", "code", "art"]
+[params.cookieConsentBanner]
+  enable         = true
+  disclaimerText = "This website is using cookies to track how you interact with it, to give you the most relevant experience. By clicking “Accept”, you consent to the use of ALL the cookies."
+  buttonText     = "Accept"
+  timeToShowUp   = 1500 # Time in milliseconds for the banner to start showing after DOM is ready
+  fadeInOutDuration = 500 # Time in milliseconds for fade-in and fade-out of the banner
+  localStorageKey = "cookieConsentStatus"
 
 [params.social]
   twitterName   = "Alban_Leandri"
@@ -51,54 +61,64 @@ enableRobotsTXT = "true"
   keybaseName   = ""
   flickrName    = ""
 
-
-  pageNotFoundTitle = "404 - Page not found"
-
-  googleSiteVerification = "xyzGoogleVerificationCode"
-  yandexSiteVerification = "abcYandexSiteVerification"
-
-
 [permalinks]
-  posts = "/:year/:month/:slug/"
-
-[[memu.main]]
-  name = "Home"
-  url = "/"
-  weight = 999
+  post      = "/post/:slug/"
 
 [[menu.main]]
-  name = "Musings"
-  url = "/categories/musings"
-  weight = 200
+  name      = "Home"
+  url       = "/"
+  weight    = 201
 
 [[menu.main]]
-  name = "Music"
-  url = "/categories/music"
-  weight = 100
+  name      = "About"
+  url       = "/about/"
+  weight    = 196
 
-[[menu.main]]
-  name = "Code"
-  url = "/categories/code"
-  weight = 99
+[params.form] # Contact form
+    netlify                 = true
+    action                  = "https://formspree.io/xxxxxxx"
+    method                  = "POST"
+    inputNameName           = "name"
+    inputNameLabel          = "Name"
+    inputNamePlaceholder    = "Enter your name"
+    inputEmailName          = "email"
+    inputEmailLabel         = "Email"
+    inputEmailPlaceholder   = "Enter a valid email"
+    inputMsgName            = "message"
+    inputMsgLabel           = "Write something here"
+    inputMsgLength          = 750
+    inputSubmitValue        = "Submit"
 
-[[menu.main]]
-  name = "Galleries"
-  url = "/galleries"
-  weight = 95
-
-[[menu.main]]
-  name = "About"
-  url = "/about"
-  weight = 90
-
-
+    
 # These are parameters used for indieweb identity. You should set these along
 # with the above email/social network parameters.
 [params.Indieweb]
-    country = "Switzerland"
-    city = "Geneva"
-    webmention = "albanleandri.com"
+    country     = "Switzerland"
+    city        = "Geneva"
+    webmention  = ""
 
 [sitemap]
-  ChangeFreq = "weekly"
-  Priority = "1"
+  ChangeFreq  = "weekly"
+  Priority    = "1"
+
+[privacy]
+[privacy.disqus]
+  disable           = false
+[privacy.googleAnalytics]
+  anonymizeIP       = false
+  disable           = false
+  respectDoNotTrack = false
+  useSessionStorage = false
+[privacy.instagram]
+  disable           = false
+  simple            = false
+[privacy.twitter]
+  disable           = false
+  enableDNT         = false
+  simple            = false
+[privacy.vimeo]
+  disable           = false
+  simple            = false
+[privacy.youtube]
+  disable           = false
+  privacyEnhanced   = false
