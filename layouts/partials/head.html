@@ -1,8 +1,8 @@
 <head>
 
-    {{ if or (.Site.Params.gtmDebug) (not .Site.IsServer) }}
-        {{ if $.Site.Params.googleTagManager }}
-            {{ partial "gtm-main-tag" . }}
+    {{ if or (.Site.Params.enableGtmDebug) (not .Site.IsServer) }}
+        {{ with .Site.Params.googleTagManagerId }}
+            {{ partial "gtm-main-tag" (dict "googleTagManagerId" . "Page" $.Page) }}
         {{ end }}
     {{ end }}
 
