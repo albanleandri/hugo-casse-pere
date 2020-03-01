@@ -27,8 +27,9 @@ enableRobotsTXT = "true"
   description = "Blog Example"
   metaDescription = ""
   googleAnalytics = ""
-  googleTagManager = "GTM-XXXXXXX"
-  gtmDebug          = false
+  enableGaDebug = false
+  googleTagManagerId = "GTM-XXXXXXX"
+  enableGtmDebug          = true
   customCSS = []
   RSSLinkPost = "" # "/post/index.xml" for RSS feed of "post" content type
   showSubcribe = true
@@ -40,7 +41,7 @@ enableRobotsTXT = "true"
 
   mainSections = ["musings", "music", "code", "art"]
 
-
+[params.social]
   twitterName   = "Alban_Leandri"
   fbName        = "alb.lan.5"
   githubName    = "albanleandri"
