@@ -1,0 +1,36 @@
+{{ "<!-- Cookie consent banner -->" | safeHTML }}
+<div id="cookieConsentBanner" style="display:none;">
+    <p>{{ .disclaimerText }}</p>
+    <button id="grantCookieConsent">{{ .buttonText }}</button>
+</div>
+{{ "<!-- End Cookie consent banner -->" | safeHTML }}
+
+<script>
+  // When DOM is ready, check if we already consent has already been recorded
+  $(document).ready(function(){
+    var cookieConsentStatus = localStorage.getItem('{{ .localStorageKey }}');
+    if (cookieConsentStatus === null || cookieConsentStatus !== 'granted') {
+      console.debug("No cookies consent was 'granted' yet. The banner will be shown.");
+      setTimeout(function () {
+        $('#cookieConsentBanner').fadeIn( {{ .fadeInOutDuration }} );
+      }, {{ .timeToShowUp }} );
+    } else {
+    console.debug("The cookies consent was already 'granted'. The banner will not be shown.")
+  }
+});
+
+  // When button is clicked, store the conscent
+  $('#grantCookieConsent').click(function() {
+    localStorage.setItem('{{ .localStorageKey }}','granted')
+    $('#cookieConsentBanner').fadeOut({{ .fadeInOutDuration }});
+    console.debug("The visitor accepted to consent. The consent is saved to local storage.")
+    if (typeof(dataLayer) !== 'undefined') {
+      console.debug("DataLayer exists. Pushing an event to trigger any tag that involves setting a cookie.")
+      dataLayer.push({
+        'event': 'cookieConsentGranted'
+        });
+    } else {
+      console.debug("GTM's dataLayer variable is not defined. No event will be pushed.")
+    }
+  });
+</script>
