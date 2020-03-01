@@ -1,8 +1,8 @@
 <meta property="og:site_name" content="{{ .Site.Params.Title }}" />
 <meta property="og:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Params.Title }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{if .Site.Params.fbName}}
-    <meta property="article:publisher" content="https://www.facebook.com/{{.Site.Params.fbName}}" />
+{{if .Site.Params.social.fbName}}
+    <meta property="article:publisher" content="https://www.facebook.com/{{.Site.Params.social.fbName}}" />
 {{end}}
 {{ if .IsPage }}
     <meta property="og:type" content="article" />
