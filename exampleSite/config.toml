@@ -9,6 +9,10 @@ canonifyurls    = true
 assetDir        = "static"
 enableRobotsTXT = "true"
 
+[sitemap]
+  ChangeFreq  = "weekly"
+  Priority    = "1"
+
 [author]
     name    = "Alban Leandri"
     nick    = "albanleandri"
@@ -96,10 +100,6 @@ enableRobotsTXT = "true"
     country     = "Switzerland"
     city        = "Geneva"
     webmention  = ""
-
-[sitemap]
-  ChangeFreq  = "weekly"
-  Priority    = "1"
 
 [privacy]
 [privacy.disqus]
