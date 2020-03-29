@@ -3,9 +3,9 @@
     <div class="container">
 
         {{ if $.Site.Params.form.netlify }}
-            <form name="contact" method="POST" data-netlify="true" class="contact__form" id="contactForm">
+            <form name="contact" method="POST" data-netlify="true" class="contact__form" id="contactForm" onsubmit="cleanForm();return false;">
         {{ else }}
-            <form action="{{ $.Site.Params.form.action }}" method="{{ lower $.Site.Params.form.method }}" class="contact__form" id="contactForm">
+            <form action="{{ $.Site.Params.form.action }}" method="{{ lower $.Site.Params.form.method }}" class="contact__form" id="contactForm" onsubmit="cleanForm();return false;">
         {{ end }}
             
                 <!-- Name -->
@@ -44,7 +44,7 @@
         
                 <!-- Submit -->
                 <div class="row">
-                    <button class="submit-contact-form" type="submit" onclick="cleanForm" aria-label="{{ $.Site.Params.form.inputSubmitValue }}">
+                    <button class="submit-contact-form" type="submit" aria-label="{{ $.Site.Params.form.inputSubmitValue }}">
                         {{ $.Site.Params.form.inputSubmitValue }}
                     </button>
                 </div>
@@ -52,5 +52,14 @@
             </form>
 
     </div>
+
+    <script>
+        function cleanForm(){    
+           var allInputs = $( ":input" );
+           for (i = 0; i < allInputs.length; i++) { 
+             allInputs[i].value = ""; 
+           }
+        }   
+    </script>
 
 </main>
