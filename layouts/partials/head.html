@@ -80,9 +80,6 @@
         {{ end }}
     {{ end }}
 
-
-    {{ if eq .Type "post" }}
-        {{ partial "schema" . }}
-    {{ end }}
+    {{ partial "schema" . }}
 
 </head>

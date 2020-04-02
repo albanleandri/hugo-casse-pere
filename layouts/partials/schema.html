@@ -22,10 +22,6 @@
             "name": {{ .Site.Params.title }},
             "url": {{ $.Site.BaseURL }},
             "description": {{ .Site.Params.metaDescription }},
-            "sameAs": [
-            "https://facebook.com/BlogPage",
-            "https://plus.google/BlogPage"
-            ],
             "publisher": {
             "@type": "Organization",
             "name": {{ .Site.Params.title }}
@@ -45,7 +41,7 @@
             "articleBody": {{ .Content | plainify | safeHTML }},
             "wordCount": {{ .Content | countwords }},
             "url": {{ .Permalink | absURL }},
-            "image": [{{ range $i, $e := .Params.Images }}{{ if $i }}, {{ end }}{{ $e | absURL }}{{ end }}],
+            "image": {{ .Params.FeaturedImage | absURL }},
             "dateCreated": {{ .Date.Format "2006-01-02" }},
             "datePublished": {{ .Date.Format "2006-01-02" }},
             "dateModified": {{ .Date.Format "2006-01-02" }},
