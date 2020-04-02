@@ -1,0 +1,47 @@
+{{ if eq .Type "post" }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title }},
+    "description": {{ .Summary | plainify | safeHTML }},
+    "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}],
+    "articleBody": {{ .Content | plainify | safeHTML }},
+    "wordCount": {{ .Content | countwords }},
+    "url": {{ .Permalink | absURL }},
+    "image": "",
+    "dateCreated": {{ .Date.Format "2006-01-02" }},
+    "datePublished": {{ .Date.Format "2006-01-02" }},
+    "dateModified": {{ .Date.Format "2006-01-02" }},
+    "author": {
+        "@type": "Person",
+        "name": {{ .Site.Author.name }},
+        "email": {{ .Site.Author.email }},
+    },
+    "mainEntityOfPage": { "@type": "WebPage" },
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ .Site.Params.title }},
+        "logo": {
+            "@type": "ImageObject",
+            "url": {{ .Site.Author.avatar | absURL }}
+        }
+    }
+}
+</script>
+{{ end }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ .Site.Params.title }},
+    "url": {{ .Site.BaseURL }},
+    "sameAs": [],
+    "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": {{ .Site.Author.mobile }},
+        "email": {{ .Site.Author.email }},
+        "contactType": "author"
+      }]
+}
+</script>
