@@ -1,7 +1,7 @@
 ---
 title: "Contact Me"
 description: "Send me a message!"
-images: []
+featuredimage: ""
 comments: false
 draft: false
 noauthor: true
