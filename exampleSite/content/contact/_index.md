@@ -6,7 +6,7 @@ comments: false
 draft: false
 noauthor: true
 share: false
-type: "page"
+type: "contact"
 menu: main
 weight: 111
 ---
