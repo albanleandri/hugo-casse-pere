@@ -1,6 +1,6 @@
 {{ "<!-- Cookie consent banner -->" | safeHTML }}
 <div id="cookieConsentBanner" style="display:none;">
-    <p>{{ .disclaimerText }}</p>
+    <p>{{ .disclaimerText }} <a href="/basic/privacy-policy">Learn more.</a></p>
     <button id="grantCookieConsent">{{ .buttonText }}</button>
 </div>
 {{ "<!-- End Cookie consent banner -->" | safeHTML }}
