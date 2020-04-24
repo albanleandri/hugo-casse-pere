@@ -14,8 +14,6 @@
     </div>
 </header>
 
-{{ if or (.Site.Params.enableGtmDebug) (not .Site.IsServer) }}
-    {{ with .Site.Params.googleTagManagerId }}
-        {{ partial "gtm-noscript-tag" . }}
-    {{ end }}
+{{ if .Site.Params.googletagmanager.containerId }}
+  {{ partial "gtm-noscript-tag" . }}
 {{ end }}

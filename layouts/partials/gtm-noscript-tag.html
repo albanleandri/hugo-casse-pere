@@ -1,6 +1,23 @@
 {{ "<!--Google Tag Manager (noscript) -->" | safeHTML }}
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id={{ . }}"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+
+{{ if and (not .Site.IsServer) (.Site.Params.googletagmanager.liveEnvironment) }}
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ $.Site.Params.googletagmanager.containerId }}{{ $.Site.Params.googletagmanager.liveEnvironment | safeURL }}"
+        height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+{{ else if and (.Site.IsServer) (.Site.Params.googletagmanager.devEnvironment) }}
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ $.Site.Params.googletagmanager.containerId }}{{ $.Site.Params.googletagmanager.devEnvironment | safeURL }}"
+        height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+{{ else }}
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ $.Site.Params.googletagmanager.containerId }}"
+        height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+{{ end }}
+
 {{ "<!--End Google Tag Manager (noscript) -->" | safeHTML }}

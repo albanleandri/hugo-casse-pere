@@ -35,8 +35,6 @@ enableRobotsTXT = "true"
   yandexSiteVerification            = "xxxxxxxxxxxxxxxxxxxxxxx"
   googleAnalyticsId                 = ""                # Standalone Google Analytics. Leave empty if you prefer to use GA through Google Tag Manager
   enableGaDebug                     = false             # Will enable GA on localhost too for dev/debug purpose
-  googleTagManagerId                = "GTM-XXXXXXX"
-  enableGtmDebug                    = false              # Will enable GTM on localhost too for dev/debug purpose
   customCSS                         = []
   RSSLinkPost                       = "/post/index.xml"
   showSubcribe                      = true
@@ -45,6 +43,14 @@ enableRobotsTXT = "true"
   showAuthorSignatureFooterArticle  = true
   showAuthorSignatureFooterCard     = true              # At the bottom of articles or in /post page, card will display the author information
   showTweetAThanks                  = true
+
+# Google Tag Manager
+[params.googletagmanager]
+containerId = "GTM-XXXXXXX"
+# Leave both fields below empty if not using GTM's "Environments" feature
+devEnvironment = "&gtm_auth=xxxxxxxxxxxxxx&gtm_preview=env-50&gtm_cookies_win=x"
+liveEnvironment = "&gtm_auth=zzzzzzzzzzzzzzzz&gtm_preview=env-1&gtm_cookies_win=x"
+
 
 
 [params.cookieConsentBanner]
