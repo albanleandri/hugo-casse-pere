@@ -18,3 +18,15 @@
   {{ partial "cookie-consent" .Site.Params.cookieConsentBanner }}
 
 {{ end }}
+
+
+{{ if .Site.Params.pushNotificationSubscribers.enable }}
+
+<script type="text/javascript">
+  var subscribersSiteId='{{ .Site.Params.pushNotificationSubscribers.siteId }}';
+</script>
+<script type="text/javascript" 
+src="https://cdn.subscribers.com/assets/subscribers.js">
+</script>
+
+{{ end }}
