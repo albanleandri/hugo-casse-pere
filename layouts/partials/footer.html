@@ -23,9 +23,7 @@
         </div>
         {{ end }}
 
-        <section class="copyright" style="line-height: 1.3em;">
-            {{.Site.Params.orgName}} {{.Site.Params.copyright}} <br>
-        </section>
+
         <nav class="site-footer-nav">
 
             {{with .Site.Params.social.linkedinName}}<a href="https://www.linkedin.com/in/{{.}}" target="_blank" rel="me">LinkedIn</a>{{end}}
@@ -38,6 +36,13 @@
             {{with .Site.Params.social.goodReads}}<a href="https://www.goodreads.com/user/show/{{.}}" target="_blank" rel="me">GoodReads</a>{{end}}
 
         </nav>
+
+    </div>
+
+    <div class="site-footer-content inner">
+        <section class="copyright" style="line-height: 1.3em;margin: auto;">
+            {{.Site.Params.orgName}} {{.Site.Params.copyright}}
+        </section>
     </div>
 
 </footer>
