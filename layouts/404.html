@@ -1,5 +1,14 @@
 {{ define "main" }}
 
+{{ if .Site.Params.googletagmanager.track404 }}
+    <script>
+        window.dataLayer.push({
+            'event': 'error',
+            'errorType': '404 - page not found'
+        });
+    </script>
+{{ end }}
+
 <body class="error-template">
 <div class="site-wrapper">
     {{ .Scratch.Set "header-style" "tag" }}
