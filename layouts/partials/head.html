@@ -1,5 +1,12 @@
 <head>
 
+    {{ if and .Site.Params.googleOptimize.enable }}
+        {{ if .Site.Params.googleOptimize.containerId }}
+            {{ partial "google-optimize.html" . }}
+        {{ end }}
+    {{ end }}
+
+
     {{ if .Site.Params.googletagmanager.containerId }}
       {{ partial "gtm-main-tag.html" (dict "Site" .Site "Page" $.Page) }}
     {{ end }}

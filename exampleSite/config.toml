@@ -53,6 +53,11 @@ devEnvironment = "&gtm_auth=xxxxxxxxxxxxxx&gtm_preview=env-50&gtm_cookies_win=x"
 liveEnvironment = "&gtm_auth=zzzzzzzzzzzzzzzz&gtm_preview=env-1&gtm_cookies_win=x"
 track404 = true # If true, a datalayer event will be pushed when a 404 page is hit
 
+# Google Optimize
+[params.googleOptimize]
+  enable      = false
+  containerId = "OPT-XXXXXXX"
+
 [params.pushNotificationSubscribers]
   enable         = true # Do not forget to download the service worker file et add it in the static folder
   siteId         = 'xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx'
