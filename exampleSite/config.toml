@@ -10,8 +10,9 @@ assetDir        = "static"
 enableRobotsTXT = "true"
 
 [sitemap]
-  ChangeFreq  = "weekly"
-  Priority    = "1"
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [author]
     name    = "Alban Leandri"
