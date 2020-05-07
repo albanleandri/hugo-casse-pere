@@ -7,11 +7,11 @@
                 {{ if not .Lastmod.IsZero }}
                     <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
                 {{ end }}
-                {{ with .Params.Sitemap.changeFreq }}
+                {{ with .Sitemap.ChangeFreq }}
                     <changefreq>{{ . }}</changefreq>
                 {{ end }}
-                {{ if ge .Params.Sitemap.priority 0.0 }}
-                    <priority>{{ .Params.Sitemap.priority }}</priority>
+                {{ if ge .Sitemap.Priority 0.0 }}
+                    <priority>{{ .Sitemap.Priority }}</priority>
                 {{ end }}
                 {{ if .IsTranslated }}
                     {{ range .Translations }}
