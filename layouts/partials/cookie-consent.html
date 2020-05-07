@@ -12,7 +12,14 @@
     if (cookieConsentStatus === null || cookieConsentStatus !== 'granted') {
       console.debug("No cookies consent was 'granted' yet. The banner will be shown.");
       setTimeout(function () {
+        
+        // Firing data layer event to trigger Persist Campaign Data tag
+        window.dataLayer.push({
+          'event': 'consentBannerShown'
+        });
+
         $('#cookieConsentBanner').fadeIn( {{ .fadeInOutDuration }} );
+
       }, {{ .timeToShowUp }} );
     } else {
     console.debug("The cookies consent was already 'granted'. The banner will not be shown.")
