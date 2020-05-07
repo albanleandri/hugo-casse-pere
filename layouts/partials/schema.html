@@ -30,7 +30,7 @@
     </script>
 {{ end }}
 
-{{ if eq .Type "post" }}
+{{ if and (eq .Type "post") (ne .Kind "section") }}
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -58,6 +58,62 @@
                     "@type": "ImageObject",
                     "url": {{ .Site.Author.avatar | absURL }}
                 }
+            }
+        }
+    </script>
+{{ end }}
+
+
+{{ if or (eq .Kind "taxonomy") (eq .Kind "section") }}
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "CollectionPage",
+            "name": {{ .Title }},
+            "headline": {{ .Title }},
+        
+            "about": {
+            "@type": "Person",
+            "@id": "/about",
+            "name": {{ .Site.Author.name }},
+            "description": {{ .Site.Author.description }}
+            },
+        
+            "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+
+                {{ $paginator := .Paginate .Site.RegularPages }}
+
+                {{ range $paginator.Pages }}
+                        {
+                        "@type": "BlogPosting",
+                        "name": {{ .Title }},
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": {{ .Site.Params.title }},
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": {{ .Site.Author.avatar | absURL }}
+                            }
+                        },
+                        "headline": {{ .Title }},
+                        "description": {{ .Title }},
+                        "url": {{ .Permalink }},
+                        "dateCreated": {{ .Date.Format "2006-01-02" }},
+                        "datePublished": {{ .Date.Format "2006-01-02" }},
+                        "dateModified": {{ .Date.Format "2006-01-02" }},
+                        "mainEntityOfPage": { "@type": "WebPage" },
+                        "image": {{ (.Params.FeaturedImage | absURL) | default (.Site.Author.avatar | absURL) }},
+                        "author": {
+                            "@type": "Person",
+                            "name": {{ .Site.Author.name }},
+                            "email": {{ .Site.Author.email }},
+                        },
+                        },
+                {{ end }}
+
+                ]
             }
         }
     </script>
