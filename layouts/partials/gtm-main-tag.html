@@ -1,10 +1,14 @@
 {{ "<!-- Google Tag Manager -->" | safeHTML }}
-{{ "<!-- create dataLayer -->" | safeHTML }}
+{{ "<!-- Create dataLayer and push page information -->" | safeHTML }}
 <script>
     var dataLayer = window.dataLayer = window.dataLayer || [];
     dataLayer.push({
-    page:'{{ .Page.Title }}',
-    category:'{{ .Page.Params.categories }}',
+        page:'{{ .Page.Title }}',
+        language: '{{ .Page.Language }}',
+        taxonomies: {
+            categories: {{ apply .Page.Params.Categories "urlize" "." }},
+            tags: {{ apply .Page.Params.Tags "urlize" "." }},
+        }
     });
 </script>
 
