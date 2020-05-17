@@ -6,7 +6,7 @@
         page:'{{ .Page.Title }}',
         language: '{{ .Page.Language }}',
         taxonomies: {
-            categories: {{ apply .Page.Params.Categories "urlize" "." }},
+            category: {{ .Page.Params.Category | urlize }},
             tags: {{ apply .Page.Params.Tags "urlize" "." }},
         }
     });

@@ -9,7 +9,7 @@ title: "Privacy Policy"
 description: ""
 type: "basic"
 menu: ""
-categories: []
+category: ""
 weight: 111
 robotsdisallow: true
 language: en

@@ -4,7 +4,7 @@ date: {{ .Date }}
 author: "Jens-Christian Fischer"
 description: ""
 image: ""
-categories: [""]
+category: ""
 tags: [""]
 language: en
 slug:

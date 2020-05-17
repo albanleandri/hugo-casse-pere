@@ -5,7 +5,7 @@ slug: 9-steps-to-craft-a-blog-article-your-audience-will-love
 linktitle:
 language: en
 tags: ["content-marketing", "content-writing"]
-categories: ["digital-marketing"]
+category: "digital-marketing"
 featuredimage: "/img/writing.jpg"
 weight: 10
 next: 

@@ -7,7 +7,7 @@ publishDate: 2020-01-31T22:21:42+01:00
 linktitle:
 language: en
 tags: ["scrum", "product-analytics"]
-categories: ["product-management"]
+category: "product-management"
 featuredimage: ""
 weight: 10
 next: 
