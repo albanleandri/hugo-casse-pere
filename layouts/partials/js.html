@@ -29,4 +29,9 @@
     src="https://cdn.subscribers.com/assets/subscribers.js">
   </script>
 
+  {{ if .Site.Params.applauseButton.enable }}
+    <!-- add the applauseButton script -->
+    <script  src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+  {{ end }}
+
 {{ end }}

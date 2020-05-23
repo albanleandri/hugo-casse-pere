@@ -5,10 +5,10 @@
             <div>
                 <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
                 {{if .Params.tags }}
-                <span class="date-divider">/</span>
-                {{ range $index, $tag := .Params.tags }}
-                <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
-                {{end}}
+                    <span class="date-divider">/</span>
+                    {{ range $index, $tag := .Params.tags }}
+                        <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
+                    {{end}}
                 {{ end }}
             </div>
         </section>
@@ -57,18 +57,29 @@
         <ul class="mentions-list" id="mentions-list"></ul>
     </div>
 
+    <div class="applause-button-container">
+        <h2>~ Thanks for reading ~</h2>
+        {{ if .Site.Params.applauseButton.enable }}
+            <div>
+                <h3>Clap...clap?</h3>
+                <applause-button/>
+            </div>
+        {{ end }}
+    </div>
+
     {{if .Site.Params.showAuthorSignatureFooterArticle }}
     <footer class="post-full-footer">
         <section class="author-card">
             <section class="author-card-content">
-                <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
-                <span class="author-card-name p-author">{{.Params.author | default .Site.Author.name}}</span>
-                <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
-
-                {{if .Site.Params.showTweetAThanks }}
-                    <p><em>Thanks for reading my blog! Don't hesite to <a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.social.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">tweet me a thanks</a> if you liked this article.</em></p>
-                {{ end }}
-
+                    <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
+                    <div style="margin:auto">
+                        <span class="author-card-name p-author"><b>By {{.Params.author | default .Site.Author.name}}</b></span>
+                        <p><em>{{.Params.authorDescription | default .Site.Author.description}}</em></p>
+                        
+                        {{if .Site.Params.showTweetAThanks }}
+                            <h3><a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.social.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">Tweet me a "Thanks" :)</a></h3>
+                        {{ end }}
+                    </div>
             </section>
         </section>
     </footer>

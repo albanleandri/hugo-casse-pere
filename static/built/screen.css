@@ -1446,7 +1446,8 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     padding: 3vw 0 6vw;
-    max-width: 840px
+    max-width: 840px;
+    width:100%;
 }
 
 .author-card, .post-full-footer {
@@ -1456,10 +1457,16 @@ body {
     align-items: center
 }
 
+.author-card {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .author-card .author-profile-image {
     margin-right: 15px;
-    width: 40px;
-    height: 40px
+    width: 60px;
+    height: 60px
 }
 
 .author-card-name {
@@ -1475,6 +1482,11 @@ body {
 
 .author-card-name a:hover {
     text-decoration: none
+}
+
+section.author-card-content {
+    display: flex;
+    align-items: center;
 }
 
 .author-card-content p {
@@ -1863,6 +1875,19 @@ body {
     width: 50%;
     height: inherit;
     background-color: #3eb0ef
+}
+
+.applause-button-container {
+    width: 100%;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.applause-button-container applause-button {
+    width: 65px;
+    height: 65px;
+    margin:auto;
+    margin-top:35px;
 }
 
 @media (max-width: 900px) {
