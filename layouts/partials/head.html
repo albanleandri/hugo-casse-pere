@@ -77,9 +77,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css" />
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
 
-    {{ if .Site.Params.applauseButton.enable }}
-        <!-- add the applauseButton style -->
-        <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css" />
+    {{ if and (eq .Type "post") (ne .Kind "section") }}
+        {{ if .Site.Params.applauseButton.enable }}
+            <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css" />
+        {{ end }}
     {{ end }}
 
 

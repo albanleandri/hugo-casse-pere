@@ -29,9 +29,18 @@
     src="https://cdn.subscribers.com/assets/subscribers.js">
   </script>
 
-  {{ if .Site.Params.applauseButton.enable }}
-    <!-- add the applauseButton script -->
-    <script  src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+  {{ if and (eq .Type "post") (ne .Kind "section") }}
+    {{ if .Site.Params.applauseButton.enable }}
+      <script  src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+      <script>
+        const applauseButton = document.getElementById("applause-button");
+        applauseButton.addEventListener("clapped", function (event) {
+          window.dataLayer.push({
+            "event":"applauseButtonClicked",
+          });
+        });     
+      </script>
+    {{ end }}
   {{ end }}
 
 {{ end }}
