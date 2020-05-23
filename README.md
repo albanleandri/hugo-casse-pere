@@ -7,17 +7,21 @@
 Thank you to Jens-Christian Fischer for his work on [Chaschper](https://github.com/jcfischer/hugo-chaschper). Chaschper is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
 
 With Casse-pere, I tried to organize things in a way that suited me better.
+For example, here's a list (non exhaustive) of the changes I made: 
 
 * Moved the navigation bar on top of the page
 * Added the Whatsapp, LinkedIn and Email share buttons to the floating header
 * Added support for Google Tag Manager
 * Added support for robots.txt and sitemap.xml generation
 * Added ability to toggle on/off the search feature, logo footer, author signature in posts
-* Show post description in list instead of full untruncated content
+* Show post description in a list instead of full untruncated content
 * Removed the "archive" content type
 * Decoupled the word count and the read time, so I can show only read time in articles
-* Fixed some screen width responsivity issues arout the 900px breakpoint
+* Fixed some screen width responsivity issues around the 900px breakpoint
 * Removed Matomo, as Google Analytics is free, and suited me
+* Added support of JSON-LD to leverage the [Schema.org](https://schema.org/) vocabulary in different types of pages
+* Added support for [applause-button](https://applause-button.com/) feature in blog pages
+* Many more...
 
 ## Theme Demo
 
@@ -27,14 +31,17 @@ With Casse-pere, I tried to organize things in a way that suited me better.
 
 Inside the folder of your Hugo site run:
 
+```
     $ cd themes
     $ git clone https://github.com/albanleandri/hugo-casse-pere.git casse-pere
-    
+```
+
 or if you plan to use [netlify](https://netlify.com) to host your site
-   
+
+```  
     $ cd themes
     $ git submodule add https://github.com/albanleandri/hugo-casse-pere.git casse-pere
-   
+```  
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -113,7 +120,7 @@ assetDir        = "static"
 
 [[menu.main]]
   name = "About"
-  url = "/about"
+  url = "/basic/about"
   weight = 90
 
 
@@ -126,12 +133,12 @@ assetDir        = "static"
 
 ```
 
-Sample content structure is given in the `exampleSite` folder. Have fun!
+A sample of content structure is given in the `exampleSite` folder. Have fun!
 
 ### Search
 
 The forked themes had a search function. It must be toggled on, in order to be visible in the navigation bar.
-It uses [DuckDuckGo](https://duckduckgo.com) for a site specific search, provided you have set the `domain` parameter in your `config.toml` file
+It uses [DuckDuckGo](https://duckduckgo.com) for a site-specific search, provided you have set the `domain` parameter in your `config.toml` file
 
 To get DuckDuckGo to index your domain, submit it to the 
 [Yandex Webmaster Tools](https://webmaster.yandex.com) -

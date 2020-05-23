@@ -90,7 +90,7 @@ track404 = true # If true, a datalayer event will be pushed when a 404 page is h
 
 [[menu.main]]
   name      = "About"
-  url       = "/about/"
+  url       = "/basic/about/"
   weight    = 196
 
 [params.form] # Contact form
