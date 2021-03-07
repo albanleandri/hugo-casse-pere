@@ -32,6 +32,7 @@
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="{{ with .Keywords }}{{ delimit  . "," }}{{ else }}{{ with .Site.Params.keywords }}{{ . }}{{ end }}{{ end }}" />
 
     {{ with .Params.robotsdisallow }}
         <meta name="robots" content="noindex, nofollow, noarchive">
