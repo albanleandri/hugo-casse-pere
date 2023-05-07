@@ -30,21 +30,20 @@
     </header>
 
     {{if .Params.image}}
-
         {{ $img := resources.Get .Params.image }}
-
         {{ with $img }}
             <figure class="post-card-image" 
                     style="background-image: url({{ (.Fill "1200x600").Permalink }})">
             </figure>
         {{ end }}
-
-    {{else}}
-
+    {{else if .Params.FeaturedImage }}
         <figure class="post-card-image"
-                style="background-image: url({{ if .Params.FeaturedImage }}{{ .Params.FeaturedImage | absURL }}{{ else }}{{$.Site.BaseURL}}defimg/{{ index (seq 23 | shuffle) 0 }}.jpg{{ end }})">
+                style="background-image: url({{ .Page.Permalink | absURL }}{{.Params.FeaturedImage}})">
         </figure>
-
+    {{else}}
+        <figure class="post-card-image"
+                style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 23 | shuffle) 0 }}.jpg)">
+        </figure>
     {{end}}
 
     <section class="post-full-content">
