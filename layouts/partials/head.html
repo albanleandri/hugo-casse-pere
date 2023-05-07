@@ -38,11 +38,12 @@
         <meta name="robots" content="noindex, nofollow, noarchive">
     {{ else }}
         <meta name="robots" content="index, follow, archive">
+        <link rel="canonical" href="{{ .Permalink }}" />
+        <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" />
     {{ end }}
 
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />
-    <link rel="canonical" href="{{ .Permalink }}" />
-
+    
     {{if .IsHome}}
         <meta name="description" content="{{ substr .Site.Params.description 0 160 }}" />
     {{ else if .IsPage }}

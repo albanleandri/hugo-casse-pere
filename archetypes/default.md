@@ -7,6 +7,7 @@ image: ""
 category: ""
 tags: [""]
 language: en
+locale: en-us
 slug:
 type: post
 draft: true

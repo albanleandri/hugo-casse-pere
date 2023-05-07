@@ -2,6 +2,8 @@
 title: "About"
 date: 2018-12-30T09:42:46+01:00
 author: "Alban L."
+language: en
+locale: en-us
 ---
 
 ## Who am I?

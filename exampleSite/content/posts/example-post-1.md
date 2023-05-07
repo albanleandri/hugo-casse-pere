@@ -6,6 +6,7 @@ date: 2020-01-31T22:21:42+01:00
 publishDate: 2020-01-31T22:21:42+01:00
 linktitle:
 language: en
+locale: en-us
 tags: ["scrum", "product-analytics"]
 category: "product-management"
 featuredimage: ""

@@ -8,6 +8,8 @@ noauthor: true
 share: false
 type: "contact"
 menu: main
+language: en
+locale: en-us
 weight: 111
 ---
 

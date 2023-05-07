@@ -4,6 +4,7 @@ description: "Good writing takes work. It takes time, preparation, research and 
 slug: 9-steps-to-craft-a-blog-article-your-audience-will-love
 linktitle:
 language: en
+locale: en-us
 tags: ["content-marketing", "content-writing"]
 category: "digital-marketing"
 featuredimage: "/img/writing.jpg"

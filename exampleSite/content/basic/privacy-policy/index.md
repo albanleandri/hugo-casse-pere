@@ -13,6 +13,7 @@ category: ""
 weight: 111
 robotsdisallow: true
 language: en
+locale: en-us
 ---
 
 ![Cookies](cookies.jpg)
