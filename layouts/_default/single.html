@@ -10,7 +10,7 @@
 
         <div class="inner">
 
-            {{ partial "post-single-sori" . }}
+            {{ partial "post-single" . }}
 
             {{ partial "disqus" . }}
 
@@ -24,7 +24,7 @@
     <aside class="read-next outer">
         <div class="inner">
             <div class="read-next-feed">
-                {{ partial "readnext-random-sori" . }}
+                {{ partial "readnext-random" . }}
                 {{with .NextInSection}}
                 {{ partial "article-card" . }}
                 {{end}}
@@ -35,12 +35,11 @@
         </div>
     </aside>
 
-    {{ partial "header-floating-sori" . }}
+    {{ partial "header-floating" . }}
 
     {{ partial "footer" . }}
 </div>
 {{ partial "js" . }}
-{{ partial "js-sori" . }}
 </body>
 
 {{ end }}

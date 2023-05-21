@@ -68,7 +68,7 @@
     <aside class="read-next outer">
         <div class="inner">
             <div class="read-next-feed">
-                {{ partial "readnext-random-sori" . }}
+                {{ partial "readnext-random" . }}
                 {{with .NextInSection}}
                 {{ partial "gallery-card" . }}
                 {{end}}
@@ -80,12 +80,11 @@
     </aside>
 
 
-    {{ partial "header-floating-sori" . }}
+    {{ partial "header-floating" . }}
 
     {{ partial "footer" . }}
 </div>
 {{ partial "js" . }}
-{{ partial "js-sori" . }}
 </body>
 
 

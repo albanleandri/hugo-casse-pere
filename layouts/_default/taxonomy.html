@@ -10,8 +10,10 @@
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
 
+            {{ $paginator := .Paginator }}
+
             <div class="post-feed">
-                {{ partial "post-list" . }}
+                {{ partial "post-list-taxonomy" . }}
             </div>
 
             <nav class="pagination" role="navigation">
