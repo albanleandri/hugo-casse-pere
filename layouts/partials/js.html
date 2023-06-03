@@ -35,14 +35,23 @@
       <script>
         const applauseButton = document.getElementById("applause-button");
         applauseButton.addEventListener("clapped", function (event) {
-          window.dataLayer.push({
+            window.dataLayer.push({
             "event":"applauseButtonClicked",
           });
-        });     
+        });
       </script>
+      {{ if .Site.IsServer }}
+        <script>
+          applauseButton.addEventListener("clapped", function (event) {
+              console.log("button clapped", event.detail);
+          });
+          applauseButton.initialClapCount.then(function (count) {
+            console.log("initial clap count", count);
+          });
+        </script>
+      {{ end }}
     {{ end }}
   {{ end }}
-
 {{ end }}
 
 <script>
