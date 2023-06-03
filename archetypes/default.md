@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-author: "Jens-Christian Fischer"
+author: "John Smith"
 description: ""
 image: ""
 category: ""
