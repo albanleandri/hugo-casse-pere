@@ -12,21 +12,16 @@
     if (cookieConsentStatus === null || cookieConsentStatus !== 'granted') {
       console.debug("No cookies consent was 'granted' yet. The banner will be shown.");
       setTimeout(function () {
-        
         // Firing data layer event to trigger Persist Campaign Data tag
-        window.dataLayer.push({
-          'event': 'consentBannerShown'
-        });
-
+        window.dataLayer.push({'event': 'consentBannerShown'});
         $('#cookieConsentBanner').fadeIn( {{ .fadeInOutDuration }} );
-
       }, {{ .timeToShowUp }} );
     } else {
-    console.debug("The cookies consent was already 'granted'. The banner will not be shown.")
-  }
-});
+        console.info("The cookies consent was already 'granted'. The banner will not be shown.")
+    }
+  });
 
-  // When button is clicked, store the conscent
+  // When button is clicked, store the consent
   $('#grantCookieConsent').click(function() {
     localStorage.setItem('{{ .localStorageKey }}','granted')
     $('#cookieConsentBanner').fadeOut({{ .fadeInOutDuration }});
