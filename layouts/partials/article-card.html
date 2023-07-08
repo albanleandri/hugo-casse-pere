@@ -9,7 +9,7 @@
     {{else if .Params.FeaturedImage }}    
         <a class="post-card-image-link" href="{{ .Permalink }}">
             <div class="post-card-image"
-                style="background-image: url({{ .Page.Permalink | absURL }}{{ .Params.FeaturedImage }})"></div>
+                style="background-image: url({{ .Permalink | absURL }}{{ .Params.FeaturedImage }})"></div>
         </a>
     {{else}}
         <a class="post-card-image-link" href="{{ .Permalink }}">
