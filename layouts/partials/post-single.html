@@ -38,7 +38,7 @@
         {{ end }}
     {{else if .Params.FeaturedImage }}
         <figure class="post-card-image"
-                style="background-image: url({{ .Page.Permalink | absURL }}{{.Params.FeaturedImage}})">
+                style="background-image: url({{ .Permalink | absURL }}{{.Params.FeaturedImage}})">
         </figure>
     {{else}}
         <figure class="post-card-image"
@@ -61,7 +61,7 @@
         {{ if .Site.Params.applauseButton.enable }}
             <div>
                 <h3>Clap...clap?</h3>
-                <applause-button id="applause-button" {{ if not .Site.IsServer }}url="{{ .Page.Permalink }}"{{ end }}></applause-button>
+                <applause-button id="applause-button" {{ if not .Site.IsServer }}url="{{ .Permalink }}"{{ end }}></applause-button>
             </div>
         {{ end }}
     </div>
@@ -76,7 +76,7 @@
                         <p><em>{{.Params.authorDescription | default .Site.Author.description}}</em></p>
                         
                         {{if .Site.Params.showTweetAThanks }}
-                            <h3><a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.social.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">Tweet me a "Thanks" :)</a></h3>
+                            <h3><a href="http://twitter.com/intent/tweet?url={{ .Permalink }}&text=Thank you @{{.Site.Params.social.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">Tweet me a "Thanks" :)</a></h3>
                         {{ end }}
                     </div>
             </section>

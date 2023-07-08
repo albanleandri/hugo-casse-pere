@@ -7,7 +7,7 @@ language: en
 locale: en-us
 tags: ["content-marketing", "content-writing"]
 category: "digital-marketing"
-featuredimage: "/img/writing.jpg"
+featuredimage: ""
 weight: 10
 next: 
 prev: 
