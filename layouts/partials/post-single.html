@@ -7,7 +7,7 @@
                 {{if .Params.tags }}
                     <span class="date-divider">/</span>
                     {{ range $index, $tag := .Params.tags }}
-                        <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
+                        <a href="/tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
                     {{end}}
                 {{ end }}
             </div>
