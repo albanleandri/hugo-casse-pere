@@ -3,7 +3,7 @@
 
         {{ $style := (print "header-content-" (.Scratch.Get "header-style")) }}
 
-        <nav class="site-nav">
+        <nav aria-label="Site menu" class="site-nav">
 
             {{ partial "site-nav-left" . }}
 
