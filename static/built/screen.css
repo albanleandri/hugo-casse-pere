@@ -860,7 +860,7 @@ body {
 }
 
 .page-template .site-main, .post-template .site-main {
-    padding-bottom: 4vw;
+    padding-bottom: 2vw;
     background: #fff
 }
 
@@ -871,7 +871,7 @@ body {
 
 .post-full-header {
     margin: 0 auto;
-    padding: 6vw 3vw 3vw;
+    padding: 3vw 3vw 3vw;
     max-width: 1040px;
     text-align: center
 }
@@ -1445,7 +1445,7 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 3vw 0 6vw;
+    padding: 2vw 0 2vw;
     max-width: 840px;
     width:100%;
 }
