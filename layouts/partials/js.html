@@ -54,6 +54,8 @@
   {{ end }}
 {{ end }}
 
+{{ if (eq .Type "post") }}
+
 <script>
   var post_url = window.location.href;
 
@@ -92,7 +94,7 @@
                   social_media_repost = social_media_repost +
                       "<a href=\"" + data.links[i].data.url + "\">"
                       + data.links[i].data.author.name + "</a>, ";
-              }else if(activity_type && activity_type == "link"){
+              } else if(activity_type && activity_type == "link"){
                   if(!social_media_post){
                       social_media_post = "<li class=\"mention-social\"><i class=\"fa fa-link\"></i> ";
                   }
@@ -191,7 +193,10 @@
 
       window.addEventListener('scroll', onScroll, {passive: true});
       window.addEventListener('resize', onResize, false);
-
+  
       update();
+      
   });
 </script>
+
+{{ end }}
