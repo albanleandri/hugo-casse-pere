@@ -70,7 +70,7 @@
     <footer class="post-full-footer">
         <section class="author-card">
             <section class="author-card-content">
-                    <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
+                    <img loading="lazy" class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
                     <div style="margin:auto">
                         <span class="author-card-name p-author"><b>By {{.Params.author | default .Site.Author.name}}</b></span>
                         <p><em>{{.Params.authorDescription | default .Site.Author.description}}</em></p>

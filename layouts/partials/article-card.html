@@ -40,7 +40,7 @@
         </a>
         {{if .Site.Params.showAuthorSignatureFooterCard }}
             <footer class="post-card-meta">
-                <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
+                <img loading="lazy" class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
                 <span class="post-card-author p-author">{{.Params.author | default .Site.Params.author}}</span>
             </footer>
         {{ end }}
