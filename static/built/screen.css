@@ -896,7 +896,7 @@ body {
 }
 
 .post-full-meta-date {
-    color: #3eb0ef
+    color: #2E5DEA
 }
 
 .post-full-title {
@@ -1030,11 +1030,11 @@ body {
 
 .post-full-content a {
     color: #000;
-    box-shadow: inset 0 -1px 0 #3eb0ef
+    box-shadow: inset 0 -1px 0 #2E5DEA
 }
 
 .post-full-content a:hover {
-    color: #3eb0ef;
+    color: #2E5DEA;
     text-decoration: none
 }
 
@@ -1081,7 +1081,7 @@ body {
 .post-full-content blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: 3px solid #3eb0ef
+    border-left: 3px solid #2E5DEA
 }
 
 .post-full-content blockquote p {
@@ -1209,7 +1209,7 @@ body {
     margin: .5em 0;
     padding: 1em 0 1.5em;
     border: 0;
-    color: #3eb0ef;
+    color: #2E5DEA;
     font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
@@ -1255,7 +1255,7 @@ body {
 }
 
 .footnote-backref {
-    color: #3eb0ef !important;
+    color: #2E5DEA !important;
     font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none !important;
@@ -1514,8 +1514,8 @@ section.author-card-content {
 }
 
 .author-card-button:hover {
-    border-color: #3eb0ef;
-    color: #3eb0ef;
+    border-color: #2E5DEA;
+    color: #2E5DEA;
     text-decoration: none
 }
 
@@ -1841,7 +1841,7 @@ section.author-card-content {
     width: 100%;
     height: 2px;
     border: none;
-    color: #3eb0ef;
+    color: #2E5DEA;
     background: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1853,11 +1853,11 @@ section.author-card-content {
 }
 
 .progress::-webkit-progress-value {
-    background-color: #3eb0ef
+    background-color: #2E5DEA
 }
 
 .progress::-moz-progress-bar {
-    background-color: #3eb0ef
+    background-color: #2E5DEA
 }
 
 .progress-container {
@@ -1874,7 +1874,7 @@ section.author-card-content {
     display: block;
     width: 50%;
     height: inherit;
-    background-color: #3eb0ef
+    background-color: #2E5DEA
 }
 
 .applause-button-container {
