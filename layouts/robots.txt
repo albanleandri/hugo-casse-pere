@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: 404.html
+Disallow: /404.html
 Disallow: /404/
 
 {{ range where .Data.Pages "Params.robotsdisallow" true }}
