@@ -3,18 +3,16 @@
     {{ $img := resources.Get .Params.image }}
         {{ with $img }}
         <a class="post-card-image-link" href="{{ .Permalink }}" aria-label="Read about {{.Params.title}}">
-            <div class="post-card-image" style="background-image: url({{ (.Fill "1200x600").Permalink }})"></div>
+            <div class="post-card-image" data-bgimage='{{ (.Fill "1200x600").Permalink }}'></div>
         </a>
         {{ end }}
     {{else if .Params.FeaturedImage }}    
         <a class="post-card-image-link" href="{{ .Permalink }}" aria-label="Read about {{.Params.title}}">
-            <div class="post-card-image"
-                style="background-image: url({{ .Page.Permalink | absURL }}{{ .Params.FeaturedImage }})"></div>
+            <div class="post-card-image" data-bgimage="{{ .Page.Permalink | relURL }}{{ .Params.FeaturedImage }}"></div>
         </a>
     {{else}}
         <a class="post-card-image-link" href="{{ .Permalink }}" aria-label="Read about {{.Params.title}}">
-            <div class="post-card-image"
-                style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 23 | shuffle) 0 }}.jpg)"></div>
+            <div class="post-card-image" data-bgimage="/defimg/{{ index (seq 23 | shuffle) 0 }}.jpg"></div>
         </a>
     {{end}}
 

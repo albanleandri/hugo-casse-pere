@@ -32,17 +32,14 @@
     {{if .Params.image}}
         {{ $img := resources.Get .Params.image }}
         {{ with $img }}
-            <figure class="post-card-image" 
-                    style="background-image: url({{ (.Fill "1200x600").Permalink }})">
+            <figure class="post-card-image" data-bgimage='{{ (.Fill "1200x600").Permalink }}'>
             </figure>
         {{ end }}
     {{else if .Params.FeaturedImage }}
-        <figure class="post-card-image"
-                style="background-image: url({{ .Page.Permalink | absURL }}{{.Params.FeaturedImage}})">
+        <figure class="post-card-image" data-bgimage="{{ .Page.Permalink | relURL }}{{.Params.FeaturedImage}}">
         </figure>
     {{else}}
-        <figure class="post-card-image"
-                style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 23 | shuffle) 0 }}.jpg)">
+        <figure class="post-card-image" data-bgimage="/defimg/{{ index (seq 23 | shuffle) 0 }}.jpg">
         </figure>
     {{end}}
 
