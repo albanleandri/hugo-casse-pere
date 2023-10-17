@@ -3,7 +3,7 @@
     {{ $img := resources.Get .Params.image }}
         {{ with $img }}
         <a class="post-card-image-link" href="{{ .Permalink }}" aria-label="Read about {{.Params.title}}">
-            <div class="post-card-image" data-bgimage='{{ (.Fill "1200x600").Permalink }}'></div>
+            <div class="post-card-image" data-bgimage="{{ (.Fill "1200x600").Permalink }}"></div>
         </a>
         {{ end }}
     {{else if .Params.FeaturedImage }}    

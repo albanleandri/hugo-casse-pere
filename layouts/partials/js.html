@@ -212,7 +212,7 @@
           if (entry.isIntersecting) {
             // Item has crossed our observation
             // threshold - load src from data-src
-            entry.target.style.backgroundImage = "url('"+entry.target.dataset.bgimage+"')";
+            entry.target.style.backgroundImage = 'url(' + entry.target.dataset.bgimage + ')';
             // Job done for this item - no need to watch it!
             observer.unobserve(entry.target);
           }
@@ -230,7 +230,7 @@
     // No interaction support? Load all background images automatically
     const headers = document.querySelectorAll('.post-card-image');
     headers.forEach(header => {
-      header.style.backgroundImage = "url('"+header.dataset.bgimage+"')";
+      header.style.backgroundImage = "url(" + header.dataset.bgimage + ")";
     });
   }
   </script>

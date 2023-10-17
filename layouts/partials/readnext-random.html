@@ -1,6 +1,6 @@
 {{ $posts := .Site.RegularPages }}{{ $postCount := len $posts }}{{if ge $postCount 4}}{{ $currentPage := . }}
 <article class="read-next-card" {{if .Site.Params.cover}}
-            style="background-image: url({{.Site.Params.cover | absURL}});" {{else}}style="background-color: #090a0b;"{{end}}>
+            style="background-image: url( {{ .Site.Params.cover | absURL }} );" {{else}}style="background-color: #090a0b;"{{end}}>
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash; {{.Site.Params.Title}} &mdash;</small>
         {{if .Params.tags }}{{ range $index, $tag := .Params.tags }}{{if lt $index 1}}
