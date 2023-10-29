@@ -11,5 +11,7 @@ menu: main
 language: en
 locale: en-us
 weight: 111
+aliases:
+- 
 ---
 
