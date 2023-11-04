@@ -19,7 +19,6 @@ author: "Alban Leandri"
 authorAvatar: favicon.ico
 robotsdisallow: false
 aliases:
-- 
 ---
 
 Some introduction
