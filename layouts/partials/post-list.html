@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate .Site.RegularPages }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "ne" "basic") }}
 
     {{ range $paginator.Pages }}
 
@@ -8,6 +8,6 @@
         
         {{ if eq .Type "gallery" }}
             {{ partial "gallery-card.html" . }}
-    {{ end }}
+        {{ end }}
 
 {{ end }}
