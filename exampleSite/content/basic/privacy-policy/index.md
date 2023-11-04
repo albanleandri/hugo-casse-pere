@@ -5,6 +5,7 @@ draft: false
 noauthor: true
 share: false
 slug: privacy-policy
+type: basic
 title: "Privacy Policy"
 description: ""
 type: "basic"
