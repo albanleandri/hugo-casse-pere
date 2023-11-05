@@ -74,7 +74,7 @@ assetDir        = "static"
   subtitle    = "Stuffs. Stuffs. Stuffs"
   copyright   = "© 2019"
 
-  cover       = "img/blog-cover.jpg"
+  cover       = "img/blog-cover.webp"
   description = "Blog"
   metaDescription = ""
   googleAnalytics = ""

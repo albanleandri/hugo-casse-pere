@@ -304,7 +304,7 @@ input, select, textarea{
     z-index: 9999;
   }
   
-  #grantCookieConsent {
+#grantCookieConsent {
     background-color: #777;
     border: none;
     color: white;

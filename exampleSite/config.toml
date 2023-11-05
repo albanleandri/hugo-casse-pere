@@ -18,7 +18,7 @@ enableRobotsTXT = true
     name    = "Alban Leandri"
     nick    = "albanleandri"
     email   = "alban.leandri@gmail.com"
-    avatar  = "/img/avatar.jpg"
+    avatar  = "/img/avatar.webp"
     description = "Product Manager. Marketer. Engineer"
     website = "https://www.albanleandri.com"
 
@@ -27,7 +27,7 @@ enableRobotsTXT = true
   title           = "Alban's Blog"
   subtitle        = "Practical… a bit technical… mostly interesting :)"
   copyright       = "AL Production © 2019"
-  cover           = "img/blog-cover.jpg"
+  cover           = "img/blog-cover.webp"
   logo            = ""
   description     = "This is my personal blog where I share some of the things I've learned, few stories and other information I hope you will enjoy."
   metaDescription = "This is my personal blog where I share some of the things I've learned, few stories and other information I hope you will enjoy."
