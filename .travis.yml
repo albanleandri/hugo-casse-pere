@@ -2,8 +2,7 @@ env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   matrix:
-    - HUGO_VERSION="0.64.1"
-    - HUGO_VERSION="0.62.0"
+    - HUGO_VERSION="0.120.3"
 
 install:
   - wget -q https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz 
