@@ -64,7 +64,7 @@ assetDir        = "static"
 [author]
     name    = "Alban Leandri"
     nick    = "aleandri"
-    email   = "alban.leandri@gmail.com"
+    email   = ""
     avatar  = ""
     description = "Product Manager. Marketer. Engineer"
 

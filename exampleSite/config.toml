@@ -17,7 +17,7 @@ enableRobotsTXT = true
 [author]
     name    = "Alban Leandri"
     nick    = "albanleandri"
-    email   = "alban.leandri@gmail.com"
+    email   = ""
     avatar  = "/img/avatar.webp"
     description = "Product Manager. Marketer. Engineer"
     website = "https://www.albanleandri.com"
