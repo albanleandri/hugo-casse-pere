@@ -40,7 +40,7 @@
     {{ else }}
         <meta name="robots" content="index, follow">
         <link rel="canonical" href="{{ .Permalink }}" />
-        <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" />
+        <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ with .Site.Language.Locale }}{{ . }}{{ else }}en-US{{ end }}" />
     {{ end }}
 
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />

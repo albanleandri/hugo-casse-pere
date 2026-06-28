@@ -2,13 +2,13 @@
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": {{ .Site.Author.name }},
+        "name": {{ .Site.Params.author.name }},
         "url": {{ .Site.BaseURL }},
         "sameAs": [],
         "contactPoint": [{
             "@type": "ContactPoint",
-            "telephone": {{ .Site.Author.mobile }},
-            "email": {{ .Site.Author.email }},
+            "telephone": {{ .Site.Params.author.mobile }},
+            "email": {{ .Site.Params.author.email }},
             "contactType": "author"
           }]
     }
@@ -47,8 +47,8 @@
             "dateModified": {{ .Date.Format "2006-01-02" }},
             "author": {
                 "@type": "Person",
-                "name": {{ .Site.Author.name }},
-                "email": {{ .Site.Author.email }},
+                "name": {{ .Site.Params.author.name }},
+                "email": {{ .Site.Params.author.email }},
             },
             "mainEntityOfPage": { "@type": "WebPage" },
             "publisher": {
@@ -56,7 +56,7 @@
                 "name": {{ .Site.Params.title }},
                 "logo": {
                     "@type": "ImageObject",
-                    "url": {{ .Site.Author.avatar | absURL }}
+                    "url": {{ .Site.Params.author.avatar | absURL }}
                 }
             }
         }
@@ -75,8 +75,8 @@
             "about": {
             "@type": "Person",
             "@id": "https://albanleandri.com/basic/about",
-            "name": {{ .Site.Author.name }},
-            "description": {{ .Site.Author.description }}
+            "name": {{ .Site.Params.author.name }},
+            "description": {{ .Site.Params.author.description }}
             },
         
             "mainEntity": {
@@ -94,7 +94,7 @@
                             "name": {{ .Site.Params.title }},
                             "logo": {
                                 "@type": "ImageObject",
-                                "url": {{ .Site.Author.avatar | absURL }}
+                                "url": {{ .Site.Params.author.avatar | absURL }}
                             }
                         },
                         "headline": {{ .Title }},
@@ -104,11 +104,11 @@
                         "datePublished": {{ .Date.Format "2006-01-02" }},
                         "dateModified": {{ .Date.Format "2006-01-02" }},
                         "mainEntityOfPage": { "@type": "WebPage" },
-                        "image": {{ (.Params.FeaturedImage | absURL) | default (.Site.Author.avatar | absURL) }},
+                        "image": {{ (.Params.FeaturedImage | absURL) | default (.Site.Params.author.avatar | absURL) }},
                         "author": {
                             "@type": "Person",
-                            "name": {{ .Site.Author.name }},
-                            "email": {{ .Site.Author.email }},
+                            "name": {{ .Site.Params.author.name }},
+                            "email": {{ .Site.Params.author.email }},
                         },
                         },
                 {{ end }}

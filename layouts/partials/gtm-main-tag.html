@@ -12,7 +12,7 @@
     });
 </script>
 
-{{ if and (not .Site.IsServer) (.Site.Params.googletagmanager.liveEnvironment) }}
+{{ if and (not hugo.IsServer) (.Site.Params.googletagmanager.liveEnvironment) }}
     {{/*  Production environment  */}}
     <script>
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -21,7 +21,7 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl+'{{ $.Site.Params.googletagmanager.liveEnvironment |safeURL }}';f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','{{ $.Site.Params.googletagmanager.containerId }}');
     </script>
-{{ else if and (.Site.IsServer) (.Site.Params.googletagmanager.devEnvironment) }}
+{{ else if and (hugo.IsServer) (.Site.Params.googletagmanager.devEnvironment) }}
     {{/*  Development environment  */}}
     <script>
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

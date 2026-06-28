@@ -3,15 +3,15 @@
         {{ if .Site.Params.Indieweb }}
         <div class="h-card vcard">
             <p>
-                <a style="text-decoration: none" href="{{ .Site.Author.website }}" class="p-name u-url url author metatag"
+                <a style="text-decoration: none" href="{{ .Site.Params.author.website }}" class="p-name u-url url author metatag"
                    rel="me">
-                    {{ .Site.Author.name }}
+                    {{ .Site.Params.author.name }}
                 </a> ( ͡° ͜ʖ ͡°)
                 <a class="u-email email metatag" rel="me" href="/contact">
                     <u>Contact me</u>
                 </a>
             </p>
-            {{with .Site.Author.avatar }}
+            {{with .Site.Params.author.avatar }}
             <p>
                 <img loading="lazy" class="u-photo avatar" src="{{ . }}" alt="Avatar" width="128px" height="163px"/>
             </p>

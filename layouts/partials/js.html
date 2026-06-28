@@ -7,7 +7,7 @@
 
 <script>hljs.initHighlightingOnLoad();</script>
 
-{{ if or (.Site.Params.enableGaDebug) (not .Site.IsServer) }}
+{{ if or (.Site.Params.enableGaDebug) (not hugo.IsServer) }}
   {{ with .Site.Params.googleAnalyticsId }}
     {{ partial "google-analytics" . }}
   {{ end }}
@@ -40,7 +40,7 @@
           });
         });
       </script>
-      {{ if .Site.IsServer }}
+      {{ if hugo.IsServer }}
         <script>
           applauseButton.addEventListener("clapped", function (event) {
               console.log("button clapped", event.detail);

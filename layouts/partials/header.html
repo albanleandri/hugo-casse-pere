@@ -21,7 +21,7 @@
     </div>
 </header>
 
-{{ if or (.Site.Params.enableGtmDebug) (not .Site.IsServer) }}
+{{ if or (.Site.Params.enableGtmDebug) (not hugo.IsServer) }}
     {{ with .Site.Params.googleTagManagerId }}
         {{ partial "gtm-noscript-tag" . }}
     {{ end }}

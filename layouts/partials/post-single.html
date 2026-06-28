@@ -58,7 +58,7 @@
         {{ if .Site.Params.applauseButton.enable }}
             <div>
                 <h3>Clap...clap?</h3>
-                <applause-button id="applause-button" {{ if not .Site.IsServer }}url="{{ .Page.Permalink }}"{{ end }}></applause-button>
+                <applause-button id="applause-button" {{ if not hugo.IsServer }}url="{{ .Page.Permalink }}"{{ end }}></applause-button>
             </div>
         {{ end }}
     </div>
@@ -69,8 +69,8 @@
             <section class="author-card-content">
                     <img loading="lazy" class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
                     <div style="margin:auto">
-                        <span class="author-card-name p-author"><b>By {{.Params.author | default .Site.Author.name}}</b></span>
-                        <p><em>{{.Params.authorDescription | default .Site.Author.description}}</em></p>
+                        <span class="author-card-name p-author"><b>By {{.Params.author | default .Site.Params.author.name}}</b></span>
+                        <p><em>{{.Params.authorDescription | default .Site.Params.author.description}}</em></p>
                         
                         {{if .Site.Params.showTweetAThanks }}
                             <h3><a href="http://twitter.com/intent/tweet?url={{ .Page.Permalink }}&text=Thank you @{{.Site.Params.social.twitterName}} for writing this helpful article. Cheers!%0a%0a{{ .Page.Title }}%0a%0a" target="_blank">Tweet me a "Thanks" :)</a></h3>
