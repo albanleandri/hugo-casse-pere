@@ -23,7 +23,7 @@
             {{ .Title }} | {{ .Site.Params.Title }}
         {{ else if eq .Type "contact" }}
             {{ .Title }} | {{ .Site.Params.Title }}
-        {{ else if .IsNode }}
+        {{ else if not .IsPage }}
             Read more posts about {{ .Title }} | {{ .Site.Params.Title }}
         {{ else }}
             {{ .Title }}
@@ -49,7 +49,7 @@
         <meta name="description" content="{{ substr .Site.Params.description 0 160 }}" />
     {{ else if .IsPage }}
         <meta name="description" content="{{ .Params.metadescription | default (substr .Summary 0 160) }}" />
-    {{ else if .IsNode }}
+    {{ else if not .IsPage }}
         <meta name="description" content='Read my posts about "{{ .Title }}". {{ .Site.Params.description }}' />
     {{ else }}
         <meta name="description" content="{{ .Params.metadescription | default .Site.Params.description }}" />
