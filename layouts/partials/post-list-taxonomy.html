@@ -1,10 +1,8 @@
-{{ $paginator := .Paginate .Site.RegularPages }}
+{{ $paginator := .Paginate .Pages }}
 
-{{- /*  printf "%#v" $.Title  */ -}}
+{{ range $paginator.Pages }}
 
-{{ range where $paginator.Pages "Params.tags" "intersect" (slice $.Title) }}
-
-        {{ if eq .Type "post" }}    
+        {{ if eq .Type "post" }}
             {{ partial "article-card.html" . }}
         {{ end }}
    
